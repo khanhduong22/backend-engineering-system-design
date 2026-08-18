@@ -13,3 +13,7 @@ node_modules/
 kido-infra/
 pocs/
 showcase-apps/
+input/
+output/
+*.dmg
+*.apkg
