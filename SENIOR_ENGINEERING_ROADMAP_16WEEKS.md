@@ -1,16 +1,16 @@
-# 🗺️ SENIOR FULLSTACK & SYSTEM DESIGN 16-WEEK AGILE ROADMAP (MASTER ALL CARDS)
+# 🗺️ SENIOR FULLSTACK & SYSTEM DESIGN 16-WEEK AGILE ROADMAP (HIGH-ROI BALANCED)
 
-> **Goal:** Master 100% ALL cards across SQL, DDIA, System Design & Networking, build 8 PoC Building Blocks + 8 Live System Showcase Apps on Contabo VPS, and achieve Senior/Lead Engineer level for top-tier job offers.  
-> **Anki Algorithm Rules:** Bắt buộc hoàn thành **Due Reviews (Bài cũ lặp lại)** hàng ngày trước khi mở **New Cards (~35-40 câu mới/ngày)**. Không có "tuần nghỉ review", Anki chạy lặp ngắt quãng liên tục 16 tuần!  
-> **Pacing:** ~260 câu mới/tuần (~35-40 câu mới/ngày) + 1 PoC hoặc 1 Showcase App/tuần (1.5 - 2h/ngày trong giờ làm việc).
+> **Goal:** Master 100% high-ROI cards across SQL, DDIA, System Design, Senior Networking & CS Core, build 8 PoC Building Blocks + 8 Live System Showcase Apps on Contabo VPS, and achieve Senior/Lead Engineer level for top-tier job offers.  
+> **Strategy Adjustment:** Bộ `07_Networking` chỉ cày các thẻ Senior/Mid thiết yếu (TLS 1.3, HTTP/2, HTTP/3 QUIC, OAuth2, epoll). Dành Tuần 15 & 16 nạp Bộ `08` (CS Core) & Bộ `09` (Web Dev & API Specs) có giá trị thực chiến cao hơn!  
+> **Anki Algorithm Rules:** Bắt buộc hoàn thành **Due Reviews (Bài cũ lặp lại)** hàng ngày trước khi mở **New Cards (~35-40 câu mới/ngày)**. Không có "tuần nghỉ review", Anki chạy lặp ngắt quãng liên tục 16 tuần!
 
 ---
 
-## 📊 1. MERMAID ROLLING TIMELINE (2 PHASES - 16 WEEKS FULL MASTER)
+## 📊 1. MERMAID ROLLING TIMELINE (2 PHASES - 16 WEEKS HIGH-ROI)
 
 ```mermaid
 gantt
-    title Master All 4,260+ Core Cards & 16 Modules Roadmap
+    title Senior Engineering High-ROI 16-Week Roadmap
     dateFormat YYYY-MM-DD
     axisFormat %d/%m
 
@@ -29,15 +29,15 @@ gantt
     Week 10 (SystemDesign Part 1 260c + App 2 Chat API)       :w10, after w9, 7d
     Week 11 (SystemDesign Part 2 260c + App 3 Search API)     :w11, after w10, 7d
     Week 12 (SystemDesign Part 3 131c FULL + App 4 Payment API):w12, after w11, 7d
-    Week 13 (Networking Part 1 260c + App 5 ShortLink API)    :w13, after w12, 7d
-    Week 14 (Networking Part 2 260c + App 6 Fintech API)      :w14, after w13, 7d
-    Week 15 (Networking Part 3 260c + App 7 Uber API)         :w15, after w14, 7d
-    Week 16 (Networking Part 4 602c FULL + App 8 Saga API)    :w16, after w15, 7d
+    Week 13 (Networking Senior Core Part 1 + App 5 ShortLink) :w13, after w12, 7d
+    Week 14 (Networking Senior Core Part 2 + App 6 Fintech API):w14, after w13, 7d
+    Week 15 (CS Core & SWE - Bộ 08 + App 7 Uber API)          :w15, after w14, 7d
+    Week 16 (Web Dev & API Specs - Bộ 09 + App 8 Saga API)    :w16, after w15, 7d
 ```
 
 ---
 
-## 📅 2. BẢNG PHÂN BỔ 100% TẤT CẢ CÁC THẺ ANKI (MASTER ALL 4,263 THẺ CORE)
+## 📅 2. BẢNG PHÂN BỔ BỘ ANKI HIGH-ROI (TỐI ƯU BỘ 07, 08 & 09)
 
 | Tuần | Tiến độ Anki New Cards (~260 câu mới/tuần) | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Deliverables & Output VPS Contabo |
 |---|---|---|---|---|
@@ -51,12 +51,12 @@ gantt
 | **Tuần 8** | **260 câu** (DDIA Part 2) | **`05_Storage_DDIA` (260 câu tiếp)** | **PoC 8:** Meilisearch + Redis Bloom + GIN Index | Demo High-Speed Search & Anti-DB Spam Engine |
 | **Tuần 9** | **225 câu** (FULL 745 câu `05_DDIA`!) | **`05_Storage_DDIA` (225 câu cuối - TRỌN BỘ 745 CÂU)** | **App 1:** Flash Sale & E-Commerce Core API | Live API App 1 + k6 5k QPS load chart |
 | **Tuần 10** | **260 câu** (SystemDesign Part 1) | **`06_SystemDesign_Architecture` (260 câu đầu)** | **App 2:** Real-Time Chat & Notification API | Live API App 2 + WebSockets Server |
-| **Tuần 11** | **260 câu** (SystemDesign Part 2) | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch Engine |
+| **Tuần 11** | **260 câu** (SystemDesign Part 1) | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch Engine |
 | **Tuần 12** | **131 câu** (FULL 651 câu `06_SystemDesign`!) | **`06_SystemDesign_Architecture` (131 câu cuối - TRỌN BỘ 651 CÂU)** | **App 4:** Payment Gateway & Webhook API | Live API App 4 + Anti-Duplicate Webhook |
-| **Tuần 13** | **260 câu** (Networking Part 1) | **`07_Networking_Security` (260 câu đầu)** | **App 5:** Short-Link Analytics API (Linkpul) | Live API App 5 + HyperLogLog UV Analytics |
-| **Tuần 14** | **260 câu** (Networking Part 2) | **`07_Networking_Security` (260 câu tiếp)** | **App 6:** Real-Time Fintech Ticker API (Index) | Live API App 6 + TimescaleDB CAGGs |
-| **Tuần 15** | **260 câu** (Networking Part 3) | **`07_Networking_Security` (260 câu tiếp)** | **App 7:** Proximity & Driver Dispatch API (Uber) | Live API App 7 + Redis GeoHashes |
-| **Tuần 16** | **602 câu** (FULL 1,382 câu `07_Networking`!) | **`07_Networking_Security` (602 câu cuối - TRỌN BỘ 1,382 CÂU)** | **App 8:** Microservices Order Saga & Outbox API | Live API App 8 + Full Senior/Lead Portfolio |
+| **Tuần 13** | **260 câu** (Networking Senior Core) | **`07_Networking_Security` (Thẻ Senior/Mid:** TLS 1.3, HTTP/2, HTTP/3, OAuth2) | **App 5:** Short-Link Analytics API (Linkpul) | Live API App 5 + HyperLogLog UV Analytics |
+| **Tuần 14** | **260 câu** (Networking Senior Core) | **`07_Networking_Security` (Thẻ Senior/Mid:** epoll, Socket Buffers, CORS, CORS Security) | **App 6:** Real-Time Fintech Ticker API (Index) | Live API App 6 + TimescaleDB CAGGs |
+| **Tuần 15** | **260 câu** (CS Core & SWE - Bộ 08) | **`08_ComputerScience_SWE_optional` (Thẻ High-ROI:** Concurrency, Data Structures, Memory) | **App 7:** Proximity & Driver Dispatch API (Uber) | Live API App 7 + Redis GeoHashes |
+| **Tuần 16** | **260 câu** (Web Dev & Specs - Bộ 09) | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI:** API Specs, HTTP Verbs, Web Architecture) | **App 8:** Microservices Order Saga & Outbox API | Live API App 8 + Full Senior/Lead Portfolio |
 
 ---
 
