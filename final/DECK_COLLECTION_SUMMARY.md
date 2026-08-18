@@ -1,0 +1,722 @@
+# 📚 BACKEND ENGINEERING ANKI COLLECTION SUMMARY REPORT
+
+Report generated directly by inspecting all active decks and cards in your local collection.
+
+---
+
+## 📂 Deck 01_DesignPatterns_OOP: Software Design Patterns & Object-Oriented Design
+- **Total Cards**: `61`
+- **Level Breakdown**: 🟢 Junior: `0` | 🟡 Mid: `7` | 🔴 Senior: `54`
+- **SubCategory Breakdown**:
+  - `PATTERNS & OOP`: 37 cards
+  - `OOP 4 PILLARS`: 7 cards
+  - `DOMAIN-DRIVEN DESIGN`: 6 cards
+  - `COMPOSITION VS INHERITANCE`: 5 cards
+  - `REFACTORING PATTERNS`: 2 cards
+  - `OBJECT-ORIENTED DESIGN`: 2 cards
+  - `CODE SMELLS`: 1 cards
+  - `DEPENDENCY INJECTION`: 1 cards
+
+---
+
+## 📂 Deck 02_Redis_Caching: Redis & In-Memory Caching Architecture
+- **Total Cards**: `112`
+- **Level Breakdown**: 🟢 Junior: `16` | 🟡 Mid: `55` | 🔴 Senior: `41`
+- **SubCategory Breakdown**:
+  - `REDIS & CACHING`: 112 cards
+
+---
+
+## 📂 Deck 03_Kafka_EventDriven: Kafka & Event-Driven Systems
+- **Total Cards**: `140`
+- **Level Breakdown**: 🟢 Junior: `48` | 🟡 Mid: `59` | 🔴 Senior: `33`
+- **SubCategory Breakdown**:
+  - `KAFKA ARCHITECTURE`: 13 cards
+  - `ARCHITECTURE`: 11 cards
+  - `CONSUMER GROUPS`: 10 cards
+  - `KAFKA CONSUMERS`: 9 cards
+  - `STREAMING ARCHITECTURE`: 9 cards
+  - `EVENT STREAMING`: 7 cards
+  - `KAFKA PRODUCERS`: 7 cards
+  - `MESSAGE BROKERS`: 7 cards
+  - `COORDINATION`: 5 cards
+  - `ZOOKEEPER`: 4 cards
+  - `CONSUMER MANAGEMENT`: 3 cards
+  - `KAFKA REPLICATION`: 3 cards
+  - `DELIVERY GUARANTEES`: 3 cards
+  - `BIG DATA ARCHITECTURE`: 2 cards
+  - `CLUSTER METADATA`: 2 cards
+  - `CLUSTER TOPOLOGY`: 2 cards
+  - `DELIVERY SEMANTICS`: 2 cards
+  - `OFFSETS`: 2 cards
+  - `COORDINATION SERVICES`: 2 cards
+  - `FAULT TOLERANCE`: 2 cards
+  - `METADATA`: 2 cards
+  - `KAFKA CORE CONCEPTS`: 2 cards
+  - `KAFKA KRAFT`: 2 cards
+  - `KAFKA STORAGE`: 2 cards
+  - `STATE`: 2 cards
+  - `DISTRIBUTION`: 2 cards
+  - `SCALING`: 2 cards
+  - `PRODUCERS`: 2 cards
+  - `STORAGE`: 2 cards
+  - `PERFORMANCE`: 2 cards
+  - `CLUSTER ARCHITECTURE`: 1 cards
+  - `CLUSTER OPERATIONS`: 1 cards
+  - `DATA PROCESSING`: 1 cards
+  - `DATA WAREHOUSING`: 1 cards
+  - `DISTRIBUTED SYSTEMS`: 1 cards
+  - `HIGH AVAILABILITY`: 1 cards
+  - `NETWORKING`: 1 cards
+  - `CLUSTER MANAGEMENT`: 1 cards
+  - `KAFKA SCHEMA REGISTRY`: 1 cards
+  - `MESSAGING`: 1 cards
+  - `CLUSTER DISCOVERY`: 1 cards
+  - `DURABILITY`: 1 cards
+  - `SECURITY`: 1 cards
+  - `CORE CONCEPTS`: 1 cards
+  - `MESSAGING SEMANTICS`: 1 cards
+
+---
+
+## 📂 Deck 04_SQL_PostgreSQL_Mastery: SQL & PostgreSQL Mastery
+- **Total Cards**: `1172`
+- **Level Breakdown**: 🟢 Junior: `356` | 🟡 Mid: `626` | 🔴 Senior: `190`
+- **SubCategory Breakdown**:
+  - `POSTGRESQL & SQL`: 526 cards
+  - `SET OPERATORS`: 202 cards
+  - `NORMALIZATION`: 160 cards
+  - `SYNTAX`: 130 cards
+  - `DATABASE PROGRAMMABILITY`: 58 cards
+  - `CONCURRENCY`: 44 cards
+  - `AGGREGATIONS`: 39 cards
+  - `INDEXING`: 13 cards
+
+---
+
+## 📂 Deck 05_Storage_DDIA: Storage Engines & Distributed Data (DDIA)
+- **Total Cards**: `745`
+- **Level Breakdown**: 🟢 Junior: `186` | 🟡 Mid: `307` | 🔴 Senior: `252`
+- **SubCategory Breakdown**:
+  - `CONCURRENCY CONTROL`: 102 cards
+  - `STORAGE ENGINES`: 77 cards
+  - `STREAM PROCESSING`: 71 cards
+  - `DISTRIBUTED SYSTEMS`: 48 cards
+  - `BATCH PROCESSING`: 43 cards
+  - `CONSENSUS`: 32 cards
+  - `REPLICATION`: 26 cards
+  - `DISTRIBUTED DATA`: 25 cards
+  - `TRANSACTIONS`: 23 cards
+  - `DISTRIBUTED TRANSACTIONS`: 16 cards
+  - `CONCURRENCY`: 15 cards
+  - `DISTRIBUTED CONSENSUS`: 13 cards
+  - `EVENT SOURCING`: 12 cards
+  - `MESSAGING`: 10 cards
+  - `PARTITIONING`: 9 cards
+  - `ARCHITECTURE`: 7 cards
+  - `DISTRIBUTED SYSTEMS FUNDAMENTALS`: 7 cards
+  - `INDEXES`: 7 cards
+  - `MAPREDUCE`: 6 cards
+  - `EVOLUTION`: 6 cards
+  - `QUERY LANGUAGES`: 6 cards
+  - `CONSISTENCY`: 6 cards
+  - `DISTRIBUTED SYSTEMS FOUNDATIONS`: 6 cards
+  - `INDEXING`: 6 cards
+  - `DISTRIBUTED CONSISTENCY`: 5 cards
+  - `DERIVED DATA`: 5 cards
+  - `SERIALIZATION`: 4 cards
+  - `DATA MODELING`: 4 cards
+  - `DATA MODELS`: 4 cards
+  - `DATA WAREHOUSING`: 4 cards
+  - `COORDINATION`: 4 cards
+  - `FAULT TOLERANCE`: 4 cards
+  - `DISTRIBUTED MESSAGING`: 4 cards
+  - `CLOCKS`: 4 cards
+  - `DISTRIBUTED SYSTEMS ARCHITECTURE`: 4 cards
+  - `EVENT STREAMING`: 4 cards
+  - `SHARDING`: 4 cards
+  - `DATA SYSTEMS`: 4 cards
+  - `MESSAGE BROKERS`: 4 cards
+  - `JOINS`: 3 cards
+  - `DISTRIBUTED STORAGE`: 3 cards
+  - `LEADER-BASED REPLICATION`: 3 cards
+  - `PERFORMANCE`: 3 cards
+  - `REBALANCING`: 3 cards
+  - `APIS AND DATA MODELS`: 2 cards
+  - `TIME`: 2 cards
+  - `DATA PROCESSING`: 2 cards
+  - `DATA SERIALIZATION`: 2 cards
+  - `DATA SYSTEMS ARCHITECTURE`: 2 cards
+  - `RPC`: 2 cards
+  - `DISTRIBUTED COORDINATION`: 2 cards
+  - `DISTRIBUTED DATA ARCHITECTURE`: 2 cards
+  - `DISTRIBUTED DATA INTEGRATION`: 2 cards
+  - `LOGS`: 2 cards
+  - `DISTRIBUTED PROCESSING`: 2 cards
+  - `DISTRIBUTED PROCESSING / BATCH PROCESSING`: 2 cards
+  - `FAILURE DETECTION`: 2 cards
+  - `NETWORKING`: 2 cards
+  - `NETWORKS`: 2 cards
+  - `ORDERING`: 2 cards
+  - `DISTRIBUTED SYSTEMS / CONSISTENCY`: 2 cards
+  - `EVENT-DRIVEN ARCHITECTURE`: 2 cards
+  - `FOUNDATIONS OF DATA SYSTEMS`: 2 cards
+  - `MULTI-LEADER REPLICATION`: 2 cards
+  - `CDC`: 2 cards
+  - `CONSISTENCY MODELS`: 2 cards
+  - `DATA LAYOUT`: 2 cards
+  - `OLAP`: 2 cards
+  - `SYSTEM ARCHITECTURE`: 2 cards
+  - `ARCHITECTURAL PATTERNS`: 1 cards
+  - `ASYNCHRONOUS MESSAGING`: 1 cards
+  - `BATCH AND STREAM PROCESSING`: 1 cards
+  - `COLUMN-ORIENTED STORAGE`: 1 cards
+  - `HARDWARE`: 1 cards
+  - `LINEARIZABILITY`: 1 cards
+  - `DATA ARCHITECTURE`: 1 cards
+  - `DATA ENGINEERING`: 1 cards
+  - `DATA ENGINEERING PRINCIPLES`: 1 cards
+  - `DATA INTEGRATION`: 1 cards
+  - `DATA INTEGRATION / STREAMING`: 1 cards
+  - `DATA INTEGRATION / UNIX PHILOSOPHY`: 1 cards
+  - `STORAGE`: 1 cards
+  - `COMPRESSION`: 1 cards
+  - `DATA SYSTEM FOUNDATIONS`: 1 cards
+  - `APIS`: 1 cards
+  - `DISTRIBUTED ARCHITECTURE`: 1 cards
+  - `DISTRIBUTED DATA MODELS`: 1 cards
+  - `DISTRIBUTED DATAFLOW / BATCH PROCESSING`: 1 cards
+  - `DISTRIBUTED QUERY PROCESSING`: 1 cards
+  - `DISTRIBUTED REPLICATION`: 1 cards
+  - `DISTRIBUTED STREAMING`: 1 cards
+  - `DISTRIBUTED SYSTEMS / CONSENSUS`: 1 cards
+  - `DISTRIBUTED SYSTEMS / FAULT TOLERANCE`: 1 cards
+  - `DISTRIBUTED SYSTEMS NETWORKING`: 1 cards
+  - `MESSAGING / STREAM PROCESSING`: 1 cards
+  - `OPERATING SYSTEMS`: 1 cards
+  - `ROUTING`: 1 cards
+  - `METRICS`: 1 cards
+  - `RELATIONAL DATABASES`: 1 cards
+  - `CONFLICT RESOLUTION`: 1 cards
+  - `QUORUMS`: 1 cards
+  - `LOAD PARAMETERS`: 1 cards
+  - `DATABASE ARCHITECTURE`: 1 cards
+  - `ENCODINGS`: 1 cards
+  - `OS INTERACTION`: 1 cards
+  - `STORAGE ENGINES / TRANSACTIONS`: 1 cards
+  - `CHANGE DATA CAPTURE`: 1 cards
+  - `SCALABILITY`: 1 cards
+
+---
+
+## 📂 Deck 06_SystemDesign_Architecture: System Design & Distributed Architecture
+- **Total Cards**: `651`
+- **Level Breakdown**: 🟢 Junior: `169` | 🟡 Mid: `266` | 🔴 Senior: `216`
+- **SubCategory Breakdown**:
+  - `OBSERVABILITY & MONITORING`: 228 cards
+  - `SYSTEM DESIGN INTERVIEWS (ALEX XU)`: 197 cards
+  - `LOAD BALANCING & GATEWAYS`: 88 cards
+  - `SYSTEM DESIGN ARCHITECTURE`: 75 cards
+  - `MICROSERVICES ARCHITECTURE`: 52 cards
+  - `RESILIENCE & FAULT TOLERANCE`: 11 cards
+
+---
+
+## 📂 Deck 07_Networking_Security: Computer Networking & Security Protocols
+- **Total Cards**: `1384`
+- **Level Breakdown**: 🟢 Junior: `611` | 🟡 Mid: `516` | 🔴 Senior: `257`
+- **SubCategory Breakdown**:
+  - `TRANSPORT LAYER`: 206 cards
+  - `APPLICATION LAYER`: 124 cards
+  - `DATA LINK LAYER`: 118 cards
+  - `NETWORK LAYER`: 99 cards
+  - `WIRELESS NETWORKS`: 89 cards
+  - `ROUTING PROTOCOLS`: 72 cards
+  - `NETWORK ARCHITECTURE`: 58 cards
+  - `MOBILE NETWORKS`: 55 cards
+  - `SOFTWARE-DEFINED NETWORKING`: 50 cards
+  - `NETWORK MANAGEMENT`: 34 cards
+  - `LINK LAYER`: 29 cards
+  - `PHYSICAL LAYER`: 26 cards
+  - `NETWORK FUNDAMENTALS`: 25 cards
+  - `SWITCHING`: 22 cards
+  - `NETWORK SECURITY`: 21 cards
+  - `DATA CENTER NETWORKING`: 18 cards
+  - `ROUTING`: 18 cards
+  - `APPLICATION LAYER PROTOCOLS`: 15 cards
+  - `CONGESTION CONTROL`: 15 cards
+  - `NETWORK PERFORMANCE`: 15 cards
+  - `MEDIUM ACCESS CONTROL`: 13 cards
+  - `QUALITY OF SERVICE`: 13 cards
+  - `WIRELESS AND MOBILE NETWORKS`: 10 cards
+  - `ADDRESSING`: 9 cards
+  - `ROUTER ARCHITECTURE`: 9 cards
+  - `RELIABLE DATA TRANSFER`: 8 cards
+  - `CELLULAR NETWORKS`: 7 cards
+  - `DNS`: 6 cards
+  - `DATA CENTER NETWORKS`: 5 cards
+  - `LOCAL AREA NETWORKS`: 5 cards
+  - `MOBILE NETWORKING`: 5 cards
+  - `NETWORK INFRASTRUCTURE`: 5 cards
+  - `NETWORK LAYER / ROUTING`: 5 cards
+  - `ROUTING ALGORITHMS`: 5 cards
+  - `DATA CENTER ARCHITECTURE`: 4 cards
+  - `LANS`: 4 cards
+  - `LAN ARCHITECTURE`: 4 cards
+  - `ARCHITECTURE`: 4 cards
+  - `TRAFFIC MANAGEMENT`: 4 cards
+  - `FORWARDING`: 4 cards
+  - `TRANSPORT LAYER / RELIABLE DATA TRANSFER`: 4 cards
+  - `ACCESS NETWORKS`: 3 cards
+  - `CELLULAR AND MOBILE NETWORKS`: 3 cards
+  - `CONTENT DELIVERY NETWORKS`: 3 cards
+  - `ERROR CONTROL`: 3 cards
+  - `DOMAIN NAME SYSTEM`: 3 cards
+  - `WIRELESS SECURITY`: 3 cards
+  - `SECURITY`: 3 cards
+  - `TRANSPORT LAYER / CONGESTION CONTROL`: 3 cards
+  - `TRANSPORT LAYER PROTOCOLS`: 3 cards
+  - `WIRELESS NETWORKING`: 3 cards
+  - `CDN`: 2 cards
+  - `P2P`: 2 cards
+  - `APPLICATION LAYER / DNS`: 2 cards
+  - `APPLICATION LAYER / HTTP`: 2 cards
+  - `CLOUD INFRASTRUCTURE`: 2 cards
+  - `ERROR DETECTION`: 2 cards
+  - `IP ADDRESSING`: 2 cards
+  - `HARDWARE`: 2 cards
+  - `MULTIPLEXING`: 2 cards
+  - `NETWORK ARCHITECTURES`: 2 cards
+  - `NETWORK DIAGNOSTICS`: 2 cards
+  - `MOBILITY`: 2 cards
+  - `NETWORK LAYER / IP`: 2 cards
+  - `NETWORK LAYER / ROUTERS`: 2 cards
+  - `SNMP`: 2 cards
+  - `NETWORK ROUTING PROTOCOLS`: 2 cards
+  - `IP`: 2 cards
+  - `PROTOCOLS`: 2 cards
+  - `NETWORK SWITCHING`: 2 cards
+  - `NETWORKING FUNDAMENTALS`: 2 cards
+  - `TRAFFIC ENGINEERING`: 2 cards
+  - `PERFORMANCE METRICS`: 2 cards
+  - `RELIABLE DATA TRANSPORT`: 2 cards
+  - `ROUTING AND BGP`: 2 cards
+  - `ROUTING AND SWITCHING`: 2 cards
+  - `SWITCHING AND LANS`: 2 cards
+  - `IPV4`: 1 cards
+  - `CLOUD ARCHITECTURE`: 1 cards
+  - `CONTENT DELIVERY`: 1 cards
+  - `PRINCIPLES`: 1 cards
+  - `DATA CENTERS`: 1 cards
+  - `CLOUD COMPUTING`: 1 cards
+  - `CONTENT DISTRIBUTION`: 1 cards
+  - `CORE INTERNET ARCHITECTURE`: 1 cards
+  - `DATA CENTER INFRASTRUCTURE`: 1 cards
+  - `DATA LINK LAYER / ADDRESSING`: 1 cards
+  - `DATA LINK LAYER / HARDWARE`: 1 cards
+  - `DATA LINK LAYER / SWITCHING`: 1 cards
+  - `DATACENTER NETWORKS`: 1 cards
+  - `CORRECTION`: 1 cards
+  - `INTERNET CONTROL MESSAGE PROTOCOL`: 1 cards
+  - `LAN ARCHITECTURES`: 1 cards
+  - `LAN TECHNOLOGIES`: 1 cards
+  - `MOBILE/WIRELESS NETWORKS`: 1 cards
+  - `MULTIPROTOCOL LABEL SWITCHING`: 1 cards
+  - `NETWORK ADDRESS TRANSLATION`: 1 cards
+  - `NETWORK ARCHITECTURE / ROUTERS`: 1 cards
+  - `NETWORK ARCHITECTURE / SWITCHES`: 1 cards
+  - `NETWORK AUTOMATION`: 1 cards
+  - `NETWORK HARDWARE`: 1 cards
+  - `DIAGNOSTICS`: 1 cards
+  - `NETWORK MOBILITY`: 1 cards
+  - `DELAYS`: 1 cards
+  - `QUEUING THEORY`: 1 cards
+  - `NETWORK PROTOCOLS`: 1 cards
+  - `NETWORK ROUTING`: 1 cards
+  - `MONITORING`: 1 cards
+  - `SDN`: 1 cards
+  - `VLANS`: 1 cards
+  - `NETWORK SERVICES`: 1 cards
+  - `NETWORK STANDARDS`: 1 cards
+  - `PHYSICAL / DATA LINK LAYER`: 1 cards
+  - `HISTORY`: 1 cards
+  - `WIRELESS`: 1 cards
+  - `PHYSICAL LAYER / MULTIPLEXING`: 1 cards
+  - `PHYSICAL LAYER / WIRELESS`: 1 cards
+  - `PHYSICAL/DATA LINK LAYER`: 1 cards
+  - `CONGESTION`: 1 cards
+  - `PERFORMANCE`: 1 cards
+  - `ROUTING ARCHITECTURE`: 1 cards
+  - `SOFTWARE DEFINED NETWORKING`: 1 cards
+  - `GOVERNANCE`: 1 cards
+  - `SWITCHING ARCHITECTURE`: 1 cards
+  - `SWITCHING ARCHITECTURES`: 1 cards
+  - `SYSTEM ARCHITECTURE`: 1 cards
+  - `TELECOMMUNICATIONS`: 1 cards
+  - `QUEUING`: 1 cards
+  - `NETWORK LAYERS`: 1 cards
+  - `TRANSPORT / DATA LINK PROTOCOLS`: 1 cards
+  - `TCP CONGESTION CONTROL`: 1 cards
+  - `TCP/IP`: 1 cards
+  - `TRANSPORT LAYER / TCP`: 1 cards
+  - `WEB CACHING`: 1 cards
+  - `WEB SECURITY`: 1 cards
+  - `MOBILE`: 1 cards
+  - `WIRELESS COMMUNICATIONS`: 1 cards
+
+---
+
+## 📂 Deck 08_ComputerScience_SWE_optional: CS Fundamentals & Software Engineering (Optional)
+- **Total Cards**: `5039`
+- **Level Breakdown**: 🟢 Junior: `2018` | 🟡 Mid: `1919` | 🔴 Senior: `1102`
+- **SubCategory Breakdown**:
+  - `DATA STRUCTURES`: 481 cards
+  - `ALGORITHMS`: 397 cards
+  - `COMPUTER ARCHITECTURE`: 276 cards
+  - `SOFTWARE ENGINEERING`: 262 cards
+  - `OPERATING SYSTEMS`: 227 cards
+  - `DATABASES`: 224 cards
+  - `DESIGN PATTERNS`: 177 cards
+  - `SOFTWARE ARCHITECTURE`: 140 cards
+  - `MACHINE LEARNING`: 136 cards
+  - `STATISTICS`: 118 cards
+  - `PROGRAMMING LANGUAGES`: 106 cards
+  - `NETWORKING`: 98 cards
+  - `CS FUNDAMENTALS`: 94 cards
+  - `DISTRIBUTED SYSTEMS`: 87 cards
+  - `NETWORK SCIENCE`: 85 cards
+  - `CONCURRENCY`: 64 cards
+  - `GRAPH THEORY`: 62 cards
+  - `VERSION CONTROL`: 61 cards
+  - `MATHEMATICS`: 60 cards
+  - `OBJECT-ORIENTED PROGRAMMING`: 55 cards
+  - `SOFTWARE TESTING`: 55 cards
+  - `DATABASE ARCHITECTURE`: 52 cards
+  - `SYSTEM DESIGN`: 51 cards
+  - `RUBY`: 49 cards
+  - `SOFTWARE DESIGN PATTERNS`: 43 cards
+  - `SECURITY`: 40 cards
+  - `PYTHON`: 38 cards
+  - `LINEAR ALGEBRA`: 34 cards
+  - `CRYPTOGRAPHY`: 33 cards
+  - `COMPLEXITY`: 32 cards
+  - `PROGRAMMING FUNDAMENTALS`: 32 cards
+  - `WEB DEVELOPMENT`: 28 cards
+  - `CLI`: 28 cards
+  - `COMPUTER SCIENCE FUNDAMENTALS`: 27 cards
+  - `COMPUTER NETWORKING`: 26 cards
+  - `DISCRETE MATHEMATICS`: 26 cards
+  - `ARCHITECTURE`: 24 cards
+  - `COLLECTIONS`: 23 cards
+  - `SOFTWARE ENGINEERING PRINCIPLES`: 22 cards
+  - `SYSTEMS`: 21 cards
+  - `RUBY PROGRAMMING`: 20 cards
+  - `MEMORY MANAGEMENT`: 19 cards
+  - `GRAPH ALGORITHMS`: 18 cards
+  - `PROBABILITY`: 18 cards
+  - `STORAGE`: 16 cards
+  - `COMPUTER ARITHMETIC`: 16 cards
+  - `SQL`: 16 cards
+  - `JAVASCRIPT`: 16 cards
+  - `C++`: 14 cards
+  - `MEMORY`: 14 cards
+  - `MULTITHREADING`: 14 cards
+  - `LANGUAGES`: 14 cards
+  - `SOFTWARE ENGINEERING MANAGEMENT`: 14 cards
+  - `SOFTWARE ENGINEERING METHODOLOGIES`: 14 cards
+  - `COMPUTER NETWORKS`: 13 cards
+  - `TESTING`: 13 cards
+  - `FUNCTIONAL PROGRAMMING`: 12 cards
+  - `WEB SECURITY`: 12 cards
+  - `ARTIFICIAL INTELLIGENCE`: 11 cards
+  - `RUNTIMES`: 11 cards
+  - `ORM`: 11 cards
+  - `DATABASE THEORY`: 11 cards
+  - `RELATIONAL ALGEBRA`: 11 cards
+  - `THEORY OF COMPUTATION`: 11 cards
+  - `PERFORMANCE`: 10 cards
+  - `THEORY`: 10 cards
+  - `COMPLEXITY THEORY`: 10 cards
+  - `NETWORKS`: 10 cards
+  - `DEVOPS`: 10 cards
+  - `JAVASCRIPT FUNDAMENTALS`: 10 cards
+  - `MATH FUNDAMENTALS`: 10 cards
+  - `PYTHON PROGRAMMING`: 10 cards
+  - `SYSTEMS PROGRAMMING`: 10 cards
+  - `DATA SCIENCE`: 9 cards
+  - `SYNTAX`: 9 cards
+  - `STRING MANIPULATION`: 9 cards
+  - `C++ MEMORY MANAGEMENT`: 8 cards
+  - `INFRASTRUCTURE`: 8 cards
+  - `DATA COMPRESSION`: 8 cards
+  - `FRONTEND DEVELOPMENT`: 8 cards
+  - `AUTHENTICATION`: 8 cards
+  - `SYSTEM ARCHITECTURE`: 8 cards
+  - `CONTROL FLOW`: 7 cards
+  - `OPTIMIZATION`: 7 cards
+  - `BACKEND DEVELOPMENT`: 7 cards
+  - `C++ STANDARD LIBRARY`: 7 cards
+  - `DATA REPRESENTATION`: 7 cards
+  - `LOW-LEVEL`: 7 cards
+  - `DATABASE SYSTEMS`: 7 cards
+  - `MATHEMATICS FOR CS`: 7 cards
+  - `MATHEMATICS FOR COMPUTER SCIENCE`: 7 cards
+  - `PYTHON / LANGUAGE FEATURES`: 7 cards
+  - `SOFTWARE DESIGN`: 7 cards
+  - `SOFTWARE DESIGN PRINCIPLES`: 7 cards
+  - `SOFTWARE ENGINEERING PRACTICES`: 7 cards
+  - `PROJECT MANAGEMENT`: 6 cards
+  - `AGILE METHODOLOGIES`: 6 cards
+  - `ARRAYS`: 6 cards
+  - `BIT MANIPULATION`: 6 cards
+  - `C++ OBJECT-ORIENTED PROGRAMMING`: 6 cards
+  - `IDIOMS`: 6 cards
+  - `MODELING`: 6 cards
+  - `DATA ENGINEERING`: 6 cards
+  - `INFORMATION THEORY`: 6 cards
+  - `PYTHON FUNDAMENTALS`: 6 cards
+  - `SORTING ALGORITHMS`: 6 cards
+  - `SYSTEMS ARCHITECTURE`: 6 cards
+  - `PROBLEM SOLVING`: 5 cards
+  - `C++ FUNDAMENTALS`: 5 cards
+  - `TOOLING`: 5 cards
+  - `DATA ENCODING`: 5 cards
+  - `ENTERPRISE ARCHITECTURE`: 5 cards
+  - `FRONTEND ENGINEERING`: 5 cards
+  - `JAVA`: 5 cards
+  - `JAVA COLLECTIONS`: 5 cards
+  - `JAVA FUNDAMENTALS`: 5 cards
+  - `MACHINE LEARNING / LLMS`: 5 cards
+  - `MACHINE LEARNING / STATISTICS`: 5 cards
+  - `NUMBER THEORY`: 5 cards
+  - `SOFTWARE ENGINEERING FUNDAMENTALS`: 5 cards
+  - `ITERATION`: 4 cards
+  - `BACKEND ENGINEERING`: 4 cards
+  - `C++ OOP`: 4 cards
+  - `CSS`: 4 cards
+  - `NUMERICAL ANALYSIS`: 4 cards
+  - `PARALLELISM`: 4 cards
+  - `CONCURRENY`: 4 cards
+  - `CYBERSECURITY`: 4 cards
+  - `DOM MANIPULATION`: 4 cards
+  - `LIBRARIES`: 4 cards
+  - `GRAPHS`: 4 cards
+  - `NORMALIZATION`: 4 cards
+  - `DEPLOYMENT`: 4 cards
+  - `ENTERPRISE JAVA`: 4 cards
+  - `MATHEMATICAL ALGORITHMS`: 4 cards
+  - `MATHEMATICS IN CS`: 4 cards
+  - `OBJECT-ORIENTED DESIGN`: 4 cards
+  - `VIRTUALIZATION`: 4 cards
+  - `OPTIMIZATION MODELS`: 4 cards
+  - `PARALLEL COMPUTING`: 4 cards
+  - `PROGRAMMING LANGUAGES / JAVASCRIPT`: 4 cards
+  - `SIGNAL PROCESSING`: 4 cards
+  - `SOFTWARE ENGINEERING PROCESS`: 4 cards
+  - `WEB ENGINEERING`: 4 cards
+  - `ALGORITHM ANALYSIS`: 3 cards
+  - `NUMERICAL METHODS`: 3 cards
+  - `C++ TYPE CASTING`: 3 cards
+  - `CALCULUS`: 3 cards
+  - `CODE QUALITY`: 3 cards
+  - `DISCRETE MATH`: 3 cards
+  - `COMPILERS`: 3 cards
+  - `HARDWARE`: 3 cards
+  - `MATH`: 3 cards
+  - `OS`: 3 cards
+  - `LANGUAGE INTERNALS`: 3 cards
+  - `DATA ANALYSIS`: 3 cards
+  - `EXPERIMENTATION`: 3 cards
+  - `PREPROCESSING`: 3 cards
+  - `DATABASE INTERNALS`: 3 cards
+  - `INFORMATION RETRIEVAL`: 3 cards
+  - `OBSERVABILITY`: 3 cards
+  - `RELIABILITY`: 3 cards
+  - `TOOLS`: 3 cards
+  - `DEVELOPER TOOLS`: 3 cards
+  - `EXPERIMENTAL DESIGN`: 3 cards
+  - `FRONTEND / CSS`: 3 cards
+  - `GAME THEORY`: 3 cards
+  - `JAVA ENTERPRISE`: 3 cards
+  - `MICROSERVICES`: 3 cards
+  - `SHELL`: 3 cards
+  - `RUBY DATA STRUCTURES`: 3 cards
+  - `DESIGN`: 3 cards
+  - `SOFTWARE ENGINEERING BEST PRACTICES`: 3 cards
+  - `SOFTWARE QUALITY ASSURANCE`: 3 cards
+  - `SOFTWARE REQUIREMENTS`: 3 cards
+  - `BITWISE OPERATIONS`: 3 cards
+  - `SYSTEMS ENGINEERING`: 3 cards
+  - `QA`: 3 cards
+  - `THEORETICAL COMPUTER SCIENCE`: 3 cards
+  - `UNIX/LINUX`: 3 cards
+  - `WEB ARCHITECTURE`: 3 cards
+  - `ADVANCED PYTHON`: 2 cards
+  - `GEOMETRY`: 2 cards
+  - `LLMS`: 2 cards
+  - `ASYNCHRONOUS PROGRAMMING`: 2 cards
+  - `BACKEND ARCHITECTURE`: 2 cards
+  - `C++ ARRAYS`: 2 cards
+  - `LINKAGE`: 2 cards
+  - `C++ LANGUAGE FEATURES`: 2 cards
+  - `C++ LANGUAGE FUNDAMENTALS`: 2 cards
+  - `C++ PERFORMANCE`: 2 cards
+  - `MOVE SEMANTICS`: 2 cards
+  - `CS THEORY`: 2 cards
+  - `CACHING`: 2 cards
+  - `CLEAN CODE`: 2 cards
+  - `COMBINATORICS`: 2 cards
+  - `COMPLEXITY ANALYSIS`: 2 cards
+  - `COMPUTER SCIENCE THEORY`: 2 cards
+  - `COMPUTER SECURITY`: 2 cards
+  - `RUNTIME`: 2 cards
+  - `DATA FORMATS`: 2 cards
+  - `DATA PROCESSING`: 2 cards
+  - `DATA SERIALIZATION`: 2 cards
+  - `DATABASE ARCHITECTURE / ORM`: 2 cards
+  - `DATABASE MODELING`: 2 cards
+  - `DATABASE ORM`: 2 cards
+  - `ORMS`: 2 cards
+  - `STORAGE SYSTEMS`: 2 cards
+  - `DATABASES / ORM`: 2 cards
+  - `SEARCH`: 2 cards
+  - `DYNAMIC PROGRAMMING`: 2 cards
+  - `GIT`: 2 cards
+  - `MODERN C++`: 2 cards
+  - `APIS`: 2 cards
+  - `FILESYSTEMS`: 2 cards
+  - `BENCHMARKING`: 2 cards
+  - `PERFORMANCE ENGINEERING`: 2 cards
+  - `PERFORMANCE OPTIMIZATION`: 2 cards
+  - `STOCHASTIC PROCESSES`: 2 cards
+  - `PROGRAMMING LANGUAGES / RUBY`: 2 cards
+  - `BUNDLER`: 2 cards
+  - `ECOSYSTEM`: 2 cards
+  - `RUNTIME ENVIRONMENTS`: 2 cards
+  - `SOFTWARE ENGINEERING / AGILE`: 2 cards
+  - `SOFTWARE ENGINEERING PROCESSES`: 2 cards
+  - `QUALITY ASSURANCE`: 2 cards
+  - `HYPOTHESIS TESTING`: 2 cards
+  - `SURVIVAL ANALYSIS`: 2 cards
+  - `TREE ALGORITHMS`: 2 cards
+  - `WEB TECHNOLOGY`: 2 cards
+  - `API DESIGN`: 1 cards
+  - `API DEVELOPMENT`: 1 cards
+  - `ADVANCED DATA STRUCTURES`: 1 cards
+  - `ALGORITHM COMPLEXITY`: 1 cards
+  - `COMPRESSION`: 1 cards
+  - `COMPUTATIONAL GEOMETRY`: 1 cards
+  - `EXTERNAL MEMORY`: 1 cards
+  - `BACKEND FRAMEWORKS`: 1 cards
+  - `C LANGUAGE FUNDAMENTALS`: 1 cards
+  - `STL`: 1 cards
+  - `C++ DESIGN PATTERNS`: 1 cards
+  - `C++ ERROR HANDLING`: 1 cards
+  - `C++ I/O`: 1 cards
+  - `C++ INITIALIZATION`: 1 cards
+  - `C++ LANGUAGE SEMANTICS`: 1 cards
+  - `C++ OBJECT MODEL`: 1 cards
+  - `C++ OPTIMIZATION`: 1 cards
+  - `C++ STANDARD TEMPLATE LIBRARY`: 1 cards
+  - `METAPROGRAMMING`: 1 cards
+  - `C++ TYPE SYSTEM`: 1 cards
+  - `CS FOUNDATIONS`: 1 cards
+  - `ENCODINGS`: 1 cards
+  - `MACHINE LEARNING PLATFORMS`: 1 cards
+  - `CODING STANDARDS`: 1 cards
+  - `LINKING`: 1 cards
+  - `COMPILER DESIGN`: 1 cards
+  - `BUILD SYSTEMS`: 1 cards
+  - `FORMAL LANGUAGES`: 1 cards
+  - `ASSEMBLY`: 1 cards
+  - `COMPUTER ENGINEERING`: 1 cards
+  - `COMPUTER SCIENCE FOUNDATIONS`: 1 cards
+  - `COMPUTER SCIENCE HISTORY`: 1 cards
+  - `COMPUTER SCIENCE MATH`: 1 cards
+  - `CONCURRENCY MODELS`: 1 cards
+  - `EXECUTION`: 1 cards
+  - `CONCURRENT PROGRAMMING`: 1 cards
+  - `LOW-LEVEL PROGRAMMING`: 1 cards
+  - `NLP`: 1 cards
+  - `FORECASTING`: 1 cards
+  - `MANIPULATION`: 1 cards
+  - `DATABASE DESIGN`: 1 cards
+  - `DATABASE SECURITY`: 1 cards
+  - `DATABASE TRANSACTIONS`: 1 cards
+  - `DEBUGGING TOOLS`: 1 cards
+  - `DESCRIPTIVE STATISTICS`: 1 cards
+  - `CI/CD`: 1 cards
+  - `DISTRIBUTED DATABASES`: 1 cards
+  - `SCRIPTING`: 1 cards
+  - `FRAMEWORKS`: 1 cards
+  - `FRONTEND`: 1 cards
+  - `CLOSURES`: 1 cards
+  - `OBJECTS`: 1 cards
+  - `SCOPING`: 1 cards
+  - `LANGUAGE DESIGN`: 1 cards
+  - `LANGUAGE FEATURES`: 1 cards
+  - `LANGUAGE MECHANICS`: 1 cards
+  - `MACHINE LEARNING METRICS`: 1 cards
+  - `ALGEBRA`: 1 cards
+  - `COMPUTATION`: 1 cards
+  - `COMPUTER SCIENCE`: 1 cards
+  - `MICROSERVICES ARCHITECTURE`: 1 cards
+  - `COMMUNICATIONS`: 1 cards
+  - `DNS`: 1 cards
+  - `MESSAGING`: 1 cards
+  - `PROTOCOLS`: 1 cards
+  - `WEB PROTOCOLS`: 1 cards
+  - `BACKEND`: 1 cards
+  - `NUMBER SYSTEMS`: 1 cards
+  - `NUMERICAL COMPUTATION`: 1 cards
+  - `LINUX`: 1 cards
+  - `OPERATING SYSTEMS / CLI`: 1 cards
+  - `PROBABILITY DISTRIBUTIONS`: 1 cards
+  - `PROGRAMMING BASICS`: 1 cards
+  - `PROGRAMMING CONCEPTS`: 1 cards
+  - `PARADIGMS`: 1 cards
+  - `PYTHON / CONCURRENCY`: 1 cards
+  - `PYTHON STANDARD LIBRARY`: 1 cards
+  - `CHAOS ENGINEERING`: 1 cards
+  - `LANGUAGE FUNDAMENTALS`: 1 cards
+  - `RUBY / WEB DEVELOPMENT`: 1 cards
+  - `RUBY METAPROGRAMMING`: 1 cards
+  - `RUBY ON RAILS`: 1 cards
+  - `RUNTIME INTERNALS`: 1 cards
+  - `CONFIGURATION`: 1 cards
+  - `PRIVACY`: 1 cards
+  - `SECURITY / SYSTEMS`: 1 cards
+  - `PATTERNS`: 1 cards
+  - `AGILE`: 1 cards
+  - `COMPLIANCE`: 1 cards
+  - `FORMAL METHODS`: 1 cards
+  - `FORMAL VERIFICATION`: 1 cards
+  - `REFACTORING`: 1 cards
+  - `TEAM ORGANIZATION`: 1 cards
+  - `VALIDATION`: 1 cards
+  - `SOFTWARE ENGINEERING HISTORY`: 1 cards
+  - `SOFTWARE ENGINEERING METHODOLOGY`: 1 cards
+  - `SOFTWARE METRICS`: 1 cards
+  - `DATA TYPES`: 1 cards
+  - `QUANTITATIVE FINANCE`: 1 cards
+  - `SYSTEMS PERFORMANCE`: 1 cards
+  - `TESTING / QUALITY ASSURANCE`: 1 cards
+  - `UNIX / LINUX`: 1 cards
+  - `VERSION CONTROL / GIT`: 1 cards
+  - `WEB APIS`: 1 cards
+  - `WEB FRAMEWORKS`: 1 cards
+  - `WEB SCRAPING`: 1 cards
+  - `MARKUP`: 1 cards
+  - `WEB TECHNOLOGIES`: 1 cards
+
+---
+
+## 📂 Deck 09_WebDev_GeneralCS_optional: General Web Dev & API Params (Optional)
+- **Total Cards**: `788`
+- **Level Breakdown**: 🟢 Junior: `207` | 🟡 Mid: `340` | 🔴 Senior: `241`
+- **SubCategory Breakdown**:
+  - `GENERAL WEB & API DEVELOPMENT`: 788 cards
+
+---
+
+### 🏆 GRAND TOTAL CARDS ACROSS COLLECTION: `10092` CARDS
