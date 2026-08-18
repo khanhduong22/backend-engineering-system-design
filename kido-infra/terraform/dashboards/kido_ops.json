@@ -1,0 +1,1543 @@
+{
+  "id": null,
+  "uid": "ag6vjv",
+  "title": "🚀 KidoOps — Command Center",
+  "tags": [
+    "kidoops",
+    "clickhouse"
+  ],
+  "timezone": "browser",
+  "editable": true,
+  "graphTooltip": 0,
+  "schemaVersion": 38,
+  "refresh": "30s",
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "row",
+      "title": "🔴 REAL-TIME HEALTH STATUS",
+      "collapsed": false,
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 1
+      },
+      "panels": []
+    },
+    {
+      "id": 1,
+      "title": "💻 CPU Load (Max: 4)",
+      "description": "",
+      "type": "gauge",
+      "gridPos": {
+        "x": 0,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT avg(value) as cpu_load FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.cpu.load_average.1m' AND unix_milli >= ${__to:raw} - 300000 AND unix_milli <= ${__to:raw}",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "min": 0,
+          "max": 4,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 1.5,
+                "color": "yellow"
+              },
+              {
+                "value": 2.5,
+                "color": "orange"
+              },
+              {
+                "value": 3.5,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 2,
+      "title": "🧠 RAM Used",
+      "description": "",
+      "type": "gauge",
+      "gridPos": {
+        "x": 4,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT avg(s.value) as ram_used FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'system.memory.usage' AND JSONExtractString(t.labels, 'state') = 'used' AND s.unix_milli >= ${__to:raw} - 300000 AND s.unix_milli <= ${__to:raw}",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0,
+          "max": 8589934592,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 5000000000,
+                "color": "yellow"
+              },
+              {
+                "value": 7000000000,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 3,
+      "title": "💾 Disk Used (/dev/sda1)",
+      "description": "",
+      "type": "gauge",
+      "gridPos": {
+        "x": 8,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT avg(s.value) as disk_used FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'system.filesystem.usage' AND JSONExtractString(t.labels, 'device') = '/dev/sda1' AND JSONExtractString(t.labels, 'state') = 'used' AND s.unix_milli >= ${__to:raw} - 300000 AND s.unix_milli <= ${__to:raw}",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0,
+          "max": 155692564480,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 100000000000,
+                "color": "yellow"
+              },
+              {
+                "value": 130000000000,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 999,
+      "title": "🔥 Tổng Docker RAM",
+      "description": "",
+      "type": "gauge",
+      "gridPos": {
+        "x": 12,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT sum(ram) as docker_ram FROM (SELECT fingerprint, avg(value) as ram FROM signoz_metrics.samples_v4 WHERE metric_name = 'container.memory.usage.total' AND unix_milli >= ${__to:raw} - 300000 AND unix_milli <= ${__to:raw} GROUP BY fingerprint)",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0,
+          "max": 8589934592,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 4000000000,
+                "color": "yellow"
+              },
+              {
+                "value": 6000000000,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 10,
+      "title": "🟥 Redis Memory",
+      "description": "",
+      "type": "gauge",
+      "gridPos": {
+        "x": 16,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT avg(value) as redis_mem FROM signoz_metrics.samples_v4 WHERE metric_name = 'redis.memory.used' AND unix_milli >= ${__to:raw} - 300000 AND unix_milli <= ${__to:raw}",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0,
+          "max": 2147483648,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 500000000,
+                "color": "yellow"
+              },
+              {
+                "value": 1000000000,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 11,
+      "title": "🟥 Redis Keys",
+      "description": "",
+      "type": "stat",
+      "gridPos": {
+        "x": 20,
+        "y": 1,
+        "w": 4,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT avg(value) as redis_keys FROM signoz_metrics.samples_v4 WHERE metric_name = 'redis.db.keys' AND unix_milli >= ${__to:raw} - 300000 AND unix_milli <= ${__to:raw}",
+          "format": 1
+        }
+      ],
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 6,
+      "title": "📈 CPU & RAM Timeline",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 7,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as cpu_load FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.cpu.load_average.1m' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        },
+        {
+          "refId": "B",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(s.unix_milli)) AS time, avg(s.value) as ram_used FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'system.memory.usage' AND JSONExtractString(t.labels, 'state') = 'used' AND s.unix_milli >= ${__from:raw} AND s.unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 7,
+      "title": "🐳 Top RAM Hogs (Docker)",
+      "description": "",
+      "type": "barchart",
+      "gridPos": {
+        "x": 12,
+        "y": 7,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT JSONExtractString(t.labels, 'container.name') as container, avg(s.value) as ram_bytes FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'container.memory.usage.total' AND s.unix_milli >= ${__to:raw} - 300000 AND s.unix_milli <= ${__to:raw} GROUP BY t.fingerprint, container ORDER BY ram_bytes DESC LIMIT 10",
+          "format": 1
+        }
+      ],
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.5,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "horizontal",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 9,
+      "title": "🐘 Postgres Connections",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 15,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as pg_conn FROM signoz_metrics.samples_v4 WHERE metric_name = 'postgresql.backends' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 8,
+      "title": "🚨 Log FATAL — Scrapers",
+      "description": "",
+      "type": "table",
+      "gridPos": {
+        "x": 12,
+        "y": 15,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT fromUnixTimestamp64Nano(timestamp) as time, severity_text, substring(body, 1, 200) as message FROM signoz_logs.logs_v2 WHERE severity_text IN ('ERROR', 'FATAL', 'fatal', 'error') AND timestamp >= ${__from:raw} * 1000000 AND timestamp <= ${__to:raw} * 1000000 ORDER BY timestamp DESC LIMIT 50",
+          "format": 1
+        }
+      ],
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "type": "row",
+      "title": "🔮 PERFORMANCE & PREDICTIVE",
+      "collapsed": false,
+      "gridPos": {
+        "x": 0,
+        "y": 9,
+        "w": 24,
+        "h": 1
+      },
+      "panels": []
+    },
+    {
+      "id": 12,
+      "title": "🚥 Load Average (1m / 5m / 15m)",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 10,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as load_1m FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.cpu.load_average.1m' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        },
+        {
+          "refId": "B",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as load_5m FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.cpu.load_average.5m' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        },
+        {
+          "refId": "C",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as load_15m FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.cpu.load_average.15m' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 13,
+      "title": "🧬 CPU Breakdown",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 10,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(s.unix_milli)) AS time, JSONExtractString(t.labels, 'cpu.state') as state, avg(s.value) as cpu_time FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'system.cpu.time' AND s.unix_milli >= ${__from:raw} AND s.unix_milli <= ${__to:raw} GROUP BY time, state ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 14,
+      "title": "🛡️ Node.js Scraper RAM Tracker",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 18,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as heap_used FROM signoz_metrics.samples_v4 WHERE metric_name = 'scraper_node_nodejs_heap_size_used_bytes' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        },
+        {
+          "refId": "B",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as heap_total FROM signoz_metrics.samples_v4 WHERE metric_name = 'scraper_node_nodejs_heap_size_total_bytes' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        },
+        {
+          "refId": "C",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as external_mem FROM signoz_metrics.samples_v4 WHERE metric_name = 'scraper_node_nodejs_external_memory_bytes' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 15,
+      "title": "🐌 App Event Loop Lag (P99)",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 18,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as p99_lag FROM signoz_metrics.samples_v4 WHERE metric_name = 'scraper_node_nodejs_eventloop_lag_p99_seconds' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 16,
+      "title": "⏳ Disk Usage Trend",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 26,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfHour(fromUnixTimestamp64Milli(s.unix_milli)) AS time, avg(s.value) as disk_used FROM signoz_metrics.samples_v4 s JOIN signoz_metrics.time_series_v4 t ON s.fingerprint = t.fingerprint WHERE s.metric_name = 'system.filesystem.usage' AND JSONExtractString(t.labels, 'device') = '/dev/sda1' AND JSONExtractString(t.labels, 'state') = 'used' AND s.unix_milli >= ${__from:raw} AND s.unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 17,
+      "title": "💽 Disk I/O",
+      "description": "",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 26,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "afk5t1ojwwbuod"
+          },
+          "rawSql": "SELECT toStartOfMinute(fromUnixTimestamp64Milli(unix_milli)) AS time, avg(value) as disk_io FROM signoz_metrics.samples_v4 WHERE metric_name = 'system.disk.io_time' AND unix_milli >= ${__from:raw} AND unix_milli <= ${__to:raw} GROUP BY time ORDER BY time",
+          "format": 1
+        }
+      ],
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 19,
+      "title": "🐘 Top 10 Slowest SQL Queries",
+      "description": "",
+      "type": "table",
+      "gridPos": {
+        "x": 0,
+        "y": 34,
+        "w": 24,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "hide": false,
+          "datasource": {
+            "type": "postgres",
+            "uid": "bfinlnsq4hkw0e"
+          },
+          "rawSql": "SELECT substring(query, 1, 120) as query_preview, calls, round(total_exec_time::numeric, 2) as total_ms, round(mean_exec_time::numeric, 2) as mean_ms, round(max_exec_time::numeric, 2) as max_ms FROM pg_stat_statements ORDER BY mean_exec_time DESC LIMIT 10",
+          "format": "table"
+        }
+      ],
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          }
+        },
+        "overrides": []
+      }
+    }
+  ]
+}
