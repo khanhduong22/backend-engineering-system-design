@@ -189,24 +189,78 @@ async function* batchDbIterator(batchSize = 100) {
 ### 🔵 MỞ RỘNG: NHÓM TIER 3 (NICHE / RARE - BÀI TOÁN ĐẶC THÙ)
 
 #### 12. Abstract Factory Pattern (Creational)
-- **Vấn đề:** Cần khởi tạo nguyên một **Họ các đối tượng tương thích** (VD: Nếu là Database Postgres ➔ Tạo `PostgresConnection` + `PostgresQueryCompiler` + `PostgresGrammar`).
-- **Giải pháp:** Tạo Factory của các Factory để đảm bảo không lắp nhầm `PostgresConnection` với `MySQLGrammar`.
+- **Vấn đề:** Cần khởi tạo nguyên một **Họ các đối tượng tương thích** (VD: Postgres Connection + Postgres Grammar), tránh lắp nhầm Postgres Connection với MySQL Grammar.
+```typescript
+interface DBFactory { createConnection(): DBConnection; createGrammar(): DBGrammar; }
+
+class PostgresFactory implements DBFactory {
+  createConnection() { return new PostgresConnection(); }
+  createGrammar() { return new PostgresGrammar(); }
+}
+```
 
 #### 13. Command Pattern (Behavioral)
-- **Vấn đề:** Đóng gói toàn bộ thông tin của 1 yêu cầu (hành động, tham số) thành 1 Object riêng biệt để lưu trữ vào Queue, hỗ trợ Undo/Redo hoặc Retry.
-- **Giải pháp:** Tạo class `CreateOrderCommand` chứa dữ liệu và hàm `execute()`.
+- **Vấn đề:** Đóng gói Request thành 1 Object độc lập để ném vào Queue (BullMQ) hoặc làm CQRS Architecture (`@nestjs/cqrs`).
+```typescript
+class CreateOrderCommand {
+  constructor(public readonly userId: number, public readonly items: any[]) {}
+}
+class CreateOrderHandler {
+  async execute(command: CreateOrderCommand) { /* Xử lý đơn hàng */ }
+}
+```
 
 #### 14. Template Method Pattern (Behavioral)
-- **Vấn đề:** Quy trình xuất Báo cáo có 4 bước: `FetchData()` ➔ `FormatData()` ➔ `GenerateFile()` ➔ `SendEmail()`. Bước 1 và 4 giống hệt nhau, chỉ có Bước 2 và 3 khác nhau giữa PDF và Excel.
-- **Giải pháp:** Viết khung thuật toán ở Abstract Base Class, chừa hàm `FormatData()` cho class con override.
+- **Vấn đề:** Quy trình Xuất Báo cáo có 4 bước: `FetchData()` ➔ `FormatRow()` ➔ `SaveFile()`. Bước 1 & 3 giống hệt nhau, chỉ Bước 2 khác nhau giữa PDF và Excel.
+```typescript
+abstract class BaseReportExporter {
+  async export() {
+    const data = await this.fetchData();
+    const formatted = data.map(row => this.formatRow(row)); // Subclass override!
+    return this.saveFile(formatted);
+  }
+  abstract formatRow(row: any): string;
+  private async fetchData() { return [/* ... */]; }
+  private saveFile(content: any) { /* Save to disk */ }
+}
+```
 
 #### 15. Facade Pattern (Structural)
-- **Vấn đề:** Đặt hàng phải gọi 5 dịch vụ: `InventoryService`, `PaymentService`, `ShippingService`, `EmailService`, `NotificationService`. Client gọi trực tiếp 5 dịch vụ này sẽ rất rối.
-- **Giải pháp:** Tạo class `CheckoutFacade` bọc 5 dịch vụ lại, cấp đúng 1 hàm duy nhất: `checkoutFacade.placeOrder(cartId)`.
+- **Vấn đề:** Quy trình Checkout phải gọi 4 dịch vụ: `InventoryService`, `PaymentService`, `ShippingService`, `EmailService`. Client gọi trực tiếp 4 dịch vụ này sẽ cực kỳ rối.
+- **Giải pháp:** Tạo 1 Facade gom 4 dịch vụ lại, cấp đúng 1 hàm duy nhất `placeOrder()`.
+```typescript
+class CheckoutFacade {
+  constructor(private inv: InventoryService, private pay: PaymentService, private ship: ShippingService) {}
+  async placeOrder(cartId: number) {
+    await this.inv.reserve();
+    await this.pay.charge();
+    await this.ship.createDelivery();
+  }
+}
+```
 
 #### 16. Composite Pattern (Structural)
-- **Vấn đề:** Quản lý danh mục sản phẩm hoặc Menu phân cấp nhiều tầng (Cấu trúc cây Tree đệ quy: Thư mục chứa File và Thư mục con).
-- **Giải pháp:** Ép cả Node lá (File) và Node cha (Thư mục) dùng chung 1 interface `MenuComponent` để duyệt cây đệ quy đơn giản.
+- **Vấn đề:** Quản lý danh mục bài viết / Menu phân cấp đệ quy N tầng (Thư mục chứa File và Thư mục con).
+```typescript
+interface MenuComponent { getName(): string; render(): void; }
+
+class MenuItem implements MenuComponent {
+  constructor(private name: string) {}
+  getName() { return this.name; }
+  render() { console.log(`  - ${this.name}`); }
+}
+
+class MenuGroup implements MenuComponent {
+  private children: MenuComponent[] = [];
+  constructor(private name: string) {}
+  add(item: MenuComponent) { this.children.push(item); }
+  getName() { return this.name; }
+  render() {
+    console.log(`[+] ${this.name}`);
+    this.children.forEach(c => c.render());
+  }
+}
+```
 
 ---
 
