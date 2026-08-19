@@ -268,3 +268,86 @@ class MenuGroup implements MenuComponent {
 1. Master trọn vẹn **6 Pattern Tier 1** và **5 Pattern Tier 2**.
 2. **Nguyên tắc "Code Replacement":** Khi lật thẻ Anki, luôn tự hỏi: *"Pattern này sinh ra để thay thế đoạn code xấu nào trong NestJS/TS?"*
 3. **Các Pattern Tier 4 bỏ qua:** *Visitor, Interpreter, Flyweight, Memento, Bridge, Prototype* nằm trong phần khung máy/compiler, không tốn thời gian học thuộc!
+
+
+---
+
+### ⚪ THAM KHẢO: NHÓM TIER 4 (LOW-ROI - RẤT HIẾM GẶP VÀ THƯỜNG KHÔNG CẦN THIẾT)
+
+> **Nhận xét của Architect:** Nhóm này đa phần là sản phẩm lịch sử của C++ năm 1994. Trong JS/TS và Backend hiện đại, bro nắm vững Tier 1 & 2 là đã tự suy luận ra 100% nhóm này mà không cần thiết phải dùng đến!
+
+#### 17. Prototype Pattern (Creational)
+- **Ý tưởng:** Clone (nhân bản) một Object có sẵn mà không phụ thuộc vào class của nó.
+```typescript
+class UserPrototype {
+  constructor(public name: string, public config: any) {}
+  clone(): UserPrototype {
+    return new UserPrototype(this.name, structuredClone(this.config));
+  }
+}
+```
+
+#### 18. Bridge Pattern (Structural)
+- **Ý tưởng:** Tách Abstraction (Điều khiển) khỏi Implementation (Thiết bị) để phát triển độc lập.
+```typescript
+interface Device { turnOn(): void; }
+class RemoteControl {
+  constructor(protected device: Device) {}
+  togglePower() { this.device.turnOn(); }
+}
+```
+
+#### 19. Flyweight Pattern (Structural)
+- **Ý tưởng:** Chia sẻ bộ nhớ cho hàng triệu Object giống nhau (chủ yếu dùng trong Game Engine đạn bắn / hạt mưa).
+```typescript
+class ParticleType { constructor(public color: string, public sprite: string) {} } // Shared Intrinsic State
+class ParticleFactory {
+  private static types = new Map<string, ParticleType>();
+  static get(color: string, sprite: string) {
+    const key = `${color}_${sprite}`;
+    if (!this.types.has(key)) this.types.set(key, new ParticleType(color, sprite));
+    return this.types.get(key)!;
+  }
+}
+```
+
+#### 20. Mediator Pattern (Behavioral)
+- **Ý tưởng:** Trung gian giao tiếp giữa các Object để chúng không gọi trực tiếp lẫn nhau (Chat Room Mediator).
+```typescript
+class ChatRoomMediator {
+  showMessage(user: User, message: string) {
+    console.log(`[${new Date().toISOString()}] ${user.getName()}: ${message}`);
+  }
+}
+```
+
+#### 21. Memento Pattern (Behavioral)
+- **Ý tưởng:** Lưu lại Snapshot trạng thái cũ của Object để làm tính năng Ctrl+Z (Undo/Redo).
+```typescript
+class EditorMemento { constructor(public readonly content: string) {} }
+class TextEditor {
+  private content = "";
+  createSnapshot() { return new EditorMemento(this.content); }
+  restore(memento: EditorMemento) { this.content = memento.content; }
+}
+```
+
+#### 22. Visitor Pattern (Behavioral)
+- **Ý tưởng:** Thêm thuật toán mới vào cấu trúc Object phức tạp mà không sửa code các Class đó (dùng trong Compiler AST Parser).
+```typescript
+interface ASTNode { accept(visitor: ASTVisitor): void; }
+interface ASTVisitor { visitElement(node: ElementNode): void; }
+class ElementNode implements ASTNode {
+  accept(visitor: ASTVisitor) { visitor.visitElement(this); }
+}
+```
+
+#### 23. Interpreter Pattern (Behavioral)
+- **Ý tưởng:** Xây dựng bộ đọc/dịch cú pháp riêng cho một ngôn ngữ nhỏ (dựng bộ tính toán biểu thức Toán học `1 + 2 * 3`).
+```typescript
+interface Expression { interpret(): number; }
+class AddExpression implements Expression {
+  constructor(private left: Expression, private right: Expression) {}
+  interpret() { return this.left.interpret() + this.right.interpret(); }
+}
+```
