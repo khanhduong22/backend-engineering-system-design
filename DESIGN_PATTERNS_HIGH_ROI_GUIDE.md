@@ -147,19 +147,26 @@ const user = new UserBuilder().setName("Khanh").setAge(30).setRole("ADMIN").buil
 ```
 
 #### 10. Proxy Pattern (Structural)
-- **Vấn đề:** Kiểm soát quyền truy cập hoặc Cache kết quả của một Object nặng mà không sửa code Object đó.
-- **Giải pháp:** Tạo Proxy đóng vai trò "Kẻ gác cổng" đứng trước Object thật.
+- **Vấn đề:** Kiểm soát truy cập (Access Control), Lazy Loading đối tượng nặng, hoặc đánh chặn phương thức (Interception) mà không cho Client biết.
+- **Phân biệt với Decorator:** Decorator sinh ra để *thêm tính năng* (như Caching/Logging), còn Proxy sinh ra để *kiểm soát quyền truy cập / đại diện từ xa* (như JS `new Proxy()`, Protection Proxy, gRPC Remote Stub).
+- **Giải pháp:** Tạo Proxy đóng vai trò "Kẻ gác cổng / Đại diện" chặn trước Object thật (Chính là cơ chế `ref() / reactive()` của Vue 3 hay ES6 `Proxy`).
 ```typescript
-class CachedUserRepositoryProxy implements UserRepository {
-  constructor(private realRepo: UserRepository, private redis: Redis) {}
-  async findById(id: number) {
-    const cached = await this.redis.get(`user:${id}`);
-    if (cached) return JSON.parse(cached);
-    const user = await this.realRepo.findById(id);
-    await this.redis.set(`user:${id}`, JSON.stringify(user));
-    return user;
+// ES6 Proxy API: Đánh chặn hành vi đọc/ghi Property của Object
+const userAccount = { balance: 1000, role: 'USER' };
+
+const securityProxy = new Proxy(userAccount, {
+  get(target, prop) {
+    console.log(`[AUDIT LOG] Ai đó vừa đọc trường: ${String(prop)}`);
+    return target[prop];
+  },
+  set(target, prop, value) {
+    if (prop === 'balance' && value < 0) {
+      throw new Error("Số dư không thể là số âm!");
+    }
+    target[prop] = value;
+    return true;
   }
-}
+});
 ```
 
 #### 11. Iterator Pattern (Behavioral)
