@@ -22,7 +22,7 @@
 | 11 | **Iterator** | **Tier 2 (HIGH)** | Behavioral | 🟡 Cao | Duyệt qua tập hợp dữ liệu (`for...of`, Async Generator functions). |
 | 12 | **Abstract Factory** | **Tier 3 (NICHE)** | Creational | 🔵 Trung bình | Tạo họ các đối tượng liên quan (VD: Cross-platform DB Client Factory). |
 | 13 | **Command** | **Tier 3 (NICHE)** | Behavioral | 🔵 Trung bình | Đóng gói Request thành Object (Undo/Redo, Queueing CLI commands). |
-| 14 | **Template Method** | **Tier 3 (NICHE)** | 🔵 Trung bình | Định nghĩa khung thuật toán cố định ở Abstract Class cho class con override. |
+| 14 | **Template Method** | **Tier 3 (NICHE)** | Behavioral | 🔵 Trung bình | Định nghĩa khung thuật toán cố định ở Abstract Class cho class con override. |
 | 15 | **Facade** | **Tier 3 (NICHE)** | Structural | 🔵 Trung bình | Gom nhiều subsystem phức tạp đằng sau 1 API interface đơn giản. |
 | 16 | **Composite** | **Tier 3 (NICHE)** | Structural | 🔵 Trung bình | Quản lý cấu trúc cây đệ quy (File/Folder tree, Nested Menu multi-level). |
 | 17 | **Prototype** | **Tier 4 (LOW)** | Creational | ⚪ Hiếm gặp | Clone đối tượng có sẵn (dùng `clone()` deep copy). |
