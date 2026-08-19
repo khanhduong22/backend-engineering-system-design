@@ -1,50 +1,56 @@
 # 🏆 GOF & ARCHITECTURAL DESIGN PATTERNS: HIGH-ROI STUDY GUIDE
 
 > **Author:** Duong Phuc Khanh (Senior Fullstack & System Architect)  
-> **Purpose:** Xếp hạng trọn bộ 23 GoF Design Patterns theo tỷ lệ ROI (High Return on Investment) — Ưu tiên học các Pattern dùng nhiều nhất trong Backend/NestJS hàng ngày, loại bỏ việc nhồi nhét học thuộc lòng không thực tế.
+> **Purpose:** Xếp hạng trọn bộ 23 GoF Design Patterns theo TIERS (High Return on Investment) — Ưu tiên học các Pattern dùng nhiều nhất trong Backend/NestJS hàng ngày, loại bỏ việc nhồi nhét học thuộc lòng không thực tế.
 
 ---
 
-## 📊 1. DANH SÁCH TRỌN BỘ 23 GOF DESIGN PATTERNS MATRIX
+## 📊 1. DANH SÁCH TRỌN BỘ 23 GOF DESIGN PATTERNS (XẾP THEO TIER KHUYÊN DÙNG)
 
-### A. Nhóm Creational Patterns (5 Patterns - Khởi tạo đối tượng)
-| STT | Pattern Name | Tier / ROI | Tần suất trong BE | Tác dụng & Use Case chính |
+### 🔥 TIER 1: MUST-KNOW (6 Patterns - Dùng hàng ngày trong Backend / NestJS)
+| STT | Pattern Name | Nhóm GoF | Tần suất trong BE | Tác dụng & Use Case chính |
 |---|---|---|---|---|
-| 1 | **Singleton** | **Tier 1 (MUST)** | 🔥 Rất cao | Đảm bảo 1 Instance duy nhất (DB Pool, Redis Client, NestJS `@Injectable()`). |
-| 2 | **Factory Method** | **Tier 1 (MUST)** | 🔥 Rất cao | Tạo đối tượng động dựa vào tham số đầu vào (`type: 'EMAIL' | 'SMS'`). |
-| 3 | **Abstract Factory** | **Tier 2 (HIGH)** | 🟡 Cao | Tạo họ các đối tượng liên quan (VD: UI Theme Factory, Cross-platform DB Factory). |
-| 4 | **Builder** | **Tier 2 (HIGH)** | 🟡 Cao | Dựng đối tượng phức tạp nhiều bước (SQL Query Builder, Test Data Fixtures). |
-| 5 | **Prototype** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Clone đối tượng có sẵn (dùng `clone()` deep copy). |
+| 1 | **Strategy** | Behavioral | 🔥 Rất cao | Thay thế `if-else` / `switch-case` chật chội. Đổi thuật toán linh hoạt (Payment, Pricing). |
+| 2 | **Factory Method** | Creational | 🔥 Rất cao | Tạo đối tượng động dựa vào tham số đầu vào (`type: 'EMAIL' | 'SMS'`). |
+| 3 | **Observer / Pub-Sub** | Behavioral | 🔥 Rất cao | Phát Event bất đồng bộ (`UserRegistered` -> Gửi Noti, Tạo Ví, Index Search). |
+| 4 | **Singleton** | Creational | 🔥 Rất cao | Đảm bảo 1 Instance duy nhất (DB Pool, Redis Client, NestJS `@Injectable()`). |
+| 5 | **Decorator** | Structural | 🔥 Rất cao | Bọc thêm tính năng (NestJS `@UseGuards()`, Caching Wrapper bọc Repository). |
+| 6 | **Adapter** | Structural | 🔥 Rất cao | Chuẩn hóa API 3rd-party (VNPay/Stripe payload) về DTO nội bộ của hệ thống. |
 
 ---
 
-### B. Nhóm Structural Patterns (7 Patterns - Cấu trúc liên kết class)
-| STT | Pattern Name | Tier / ROI | Tần suất trong BE | Tác dụng & Use Case chính |
+### 🟡 TIER 2: HIGH-VALUE (5 Patterns - Dùng thường xuyên trong Kiến trúc Phân tán / Clean Architecture)
+| STT | Pattern Name | Nhóm GoF | Tần suất trong BE | Tác dụng & Use Case chính |
 |---|---|---|---|---|
-| 6 | **Decorator** | **Tier 1 (MUST)** | 🔥 Rất cao | Bọc thêm tính năng (NestJS `@UseGuards()`, Caching Wrapper bọc Repository). |
-| 7 | **Adapter** | **Tier 1 (MUST)** | 🔥 Rất cao | Chuẩn hóa API 3rd-party (VNPay/Stripe payload) về DTO nội bộ. |
-| 8 | **Proxy** | **Tier 2 (HIGH)** | 🟡 Cao | Control truy cập (Security Proxy, Lazy Loading, Nginx Reverse Proxy). |
-| 9 | **Facade** | **Tier 3 (NICHE)** | 🔵 Trung bình | Gom nhiều subsystem phức tạp đằng sau 1 API interface đơn giản. |
-| 10 | **Composite** | **Tier 3 (NICHE)** | 🔵 Trung bình | Quản lý cấu trúc cây đệ quy (File/Folder tree, Nested Menu multi-level). |
-| 11 | **Bridge** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Tách Abstraction khỏi Implementation (ít dùng trong BE hiện đại). |
-| 12 | **Flyweight** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Chia sẻ bộ nhớ cho hàng ngàn đối tượng giống nhau (dùng trong Game/Graphics Engine). |
+| 7 | **Chain of Responsibility**| Behavioral | 🟡 Cao | Xây dựng Middleware Pipeline (Auth -> Role Check -> Rate Limit -> Handler). |
+| 8 | **State** | Behavioral | 🟡 Cao | Quản lý State Machine đơn hàng (`CREATED` -> `PAID` -> `SHIPPED` -> `CANCELLED`). |
+| 9 | **Builder** | Creational | 🟡 Cao | Dựng đối tượng phức tạp nhiều bước (SQL Query Builder, Test Data Fixtures). |
+| 10 | **Proxy** | Structural | 🟡 Cao | Control truy cập (Security Proxy, Lazy Loading, Nginx Reverse Proxy). |
+| 11 | **Iterator** | Behavioral | 🟡 Cao | Duyệt qua tập hợp dữ liệu (`for...of`, Async Generator functions). |
 
 ---
 
-### C. Nhóm Behavioral Patterns (11 Patterns - Hành vi & Giao tiếp)
-| STT | Pattern Name | Tier / ROI | Tần suất trong BE | Tác dụng & Use Case chính |
+### 🔵 TIER 3: NICHE / RARE (5 Patterns - Dùng cho các bài toán đặc thù)
+| STT | Pattern Name | Nhóm GoF | Tần suất trong BE | Tác dụng & Use Case chính |
 |---|---|---|---|---|
-| 13 | **Strategy** | **Tier 1 (MUST)** | 🔥 Rất cao | Thay thế `if-else` / `switch-case` chật chội. Đổi thuật toán linh hoạt (Payment, Pricing). |
-| 14 | **Observer / Pub-Sub** | **Tier 1 (MUST)** | 🔥 Rất cao | Phát Event bất đồng bộ (`UserRegistered` -> Gửi Noti, Tạo Ví, Index Search). |
-| 15 | **Chain of Responsibility**| **Tier 2 (HIGH)** | 🟡 Cao | Middleware Pipeline (Auth -> Role Check -> Rate Limit -> Handler). |
-| 16 | **State** | **Tier 2 (HIGH)** | 🟡 Cao | Quản lý State Machine đơn hàng (`CREATED` -> `PAID` -> `SHIPPED` -> `CANCELLED`). |
-| 17 | **Iterator** | **Tier 2 (HIGH)** | 🟡 Cao | Duyệt qua tập hợp dữ liệu (`for...of`, Generator functions). |
-| 18 | **Command** | **Tier 3 (NICHE)** | 🔵 Trung bình | Đóng gói Request thành Object (Undo/Redo, Queueing CLI commands). |
-| 19 | **Template Method** | **Tier 3 (NICHE)** | 🔵 Trung bình | Định nghĩa khung thuật toán cố định ở Abstract Class cho class con override. |
-| 20 | **Mediator** | **Tier 3 (NICHE)** | 🔵 Trung bình | Trung gian giao tiếp giảm phụ thuộc chéo (Chat room server, Event Bus). |
-| 21 | **Memento** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Lưu và khôi phục Snapshot trạng thái cũ của Object (Undo state). |
-| 22 | **Visitor** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Thêm thuật toán mới vào class mà không sửa class đó (dùng trong Compiler AST). |
-| 23 | **Interpreter** | **Tier 4 (LOW)** | ⚪ Hiếm gặp | Xây dựng bộ đọc/dịch ngôn ngữ/cú pháp riêng (Regex, SQL Parser). |
+| 12 | **Abstract Factory** | Creational | 🔵 Trung bình | Tạo họ các đối tượng liên quan (VD: Cross-platform DB Client Factory). |
+| 13 | **Command** | Behavioral | 🔵 Trung bình | Đóng gói Request thành Object (Undo/Redo, Queueing CLI commands). |
+| 14 | **Template Method** | Behavioral | 🔵 Trung bình | Định nghĩa khung thuật toán cố định ở Abstract Class cho class con override. |
+| 15 | **Facade** | Structural | 🔵 Trung bình | Gom nhiều subsystem phức tạp đằng sau 1 API interface đơn giản. |
+| 16 | **Composite** | Structural | 🔵 Trung bình | Quản lý cấu trúc cây đệ quy (File/Folder tree, Nested Menu multi-level). |
+
+---
+
+### ⚪ TIER 4: LOW-ROI (7 Patterns - Rất hiếm gặp / Chủ yếu nằm trong Framework Core)
+| STT | Pattern Name | Nhóm GoF | Tần suất trong BE | Tác dụng & Use Case chính |
+|---|---|---|---|---|
+| 17 | **Prototype** | Creational | ⚪ Hiếm gặp | Clone đối tượng có sẵn (dùng `clone()` deep copy). |
+| 18 | **Bridge** | Structural | ⚪ Hiếm gặp | Tách Abstraction khỏi Implementation (ít dùng trong BE hiện đại). |
+| 19 | **Flyweight** | Structural | ⚪ Hiếm gặp | Chia sẻ bộ nhớ cho hàng ngàn đối tượng giống nhau (Game Engine). |
+| 20 | **Mediator** | Behavioral | ⚪ Hiếm gặp | Trung gian giao tiếp giảm phụ thuộc chéo (Chat room server, Event Bus). |
+| 21 | **Memento** | Behavioral | ⚪ Hiếm gặp | Lưu và khôi phục Snapshot trạng thái cũ của Object (Undo state). |
+| 22 | **Visitor** | Behavioral | ⚪ Hiếm gặp | Thêm thuật toán mới vào class mà không sửa class đó (Compiler AST). |
+| 23 | **Interpreter** | Behavioral | ⚪ Hiếm gặp | Xây dựng bộ đọc/dịch ngôn ngữ/cú pháp riêng (Regex, SQL Parser). |
 
 ---
 
