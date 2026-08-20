@@ -1,4 +1,28 @@
 {
+    "20260817": {
+        "01_DesignPatterns_OOP": {
+            "target_seconds": 1800
+        },
+        "02_Redis_Caching": {
+            "target_seconds": 1800
+        }
+    },
+    "20260818": {
+        "01_DesignPatterns_OOP": {
+            "target_seconds": 1800
+        },
+        "02_Redis_Caching": {
+            "target_seconds": 1800
+        }
+    },
+    "20260819": {
+        "01_DesignPatterns_OOP": {
+            "target_seconds": 1800
+        },
+        "02_Redis_Caching": {
+            "target_seconds": 1800
+        }
+    },
     "20260820": {
         "01_DesignPatterns_OOP": {
             "target_seconds": 1800
@@ -32,26 +56,35 @@
         }
     },
     "20260824": {
-        "01_DesignPatterns_OOP": {
+        "02_Redis_Caching": {
+            "target_seconds": 900
+        },
+        "03_Kafka_EventDriven": {
             "target_seconds": 1800
         },
-        "02_Redis_Caching": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 1800
         }
     },
     "20260825": {
-        "01_DesignPatterns_OOP": {
+        "02_Redis_Caching": {
+            "target_seconds": 900
+        },
+        "03_Kafka_EventDriven": {
             "target_seconds": 1800
         },
-        "02_Redis_Caching": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 1800
         }
     },
     "20260826": {
-        "01_DesignPatterns_OOP": {
+        "02_Redis_Caching": {
+            "target_seconds": 900
+        },
+        "03_Kafka_EventDriven": {
             "target_seconds": 1800
         },
-        "02_Redis_Caching": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 1800
         }
     },
@@ -100,36 +133,27 @@
         }
     },
     "20260831": {
-        "02_Redis_Caching": {
-            "target_seconds": 900
+        "04_SQL_PostgreSQL_Mastery": {
+            "target_seconds": 2700
         },
         "03_Kafka_EventDriven": {
-            "target_seconds": 1800
-        },
-        "04_SQL_PostgreSQL_Mastery": {
-            "target_seconds": 1800
+            "target_seconds": 900
         }
     },
     "20260901": {
-        "02_Redis_Caching": {
-            "target_seconds": 900
+        "04_SQL_PostgreSQL_Mastery": {
+            "target_seconds": 2700
         },
         "03_Kafka_EventDriven": {
-            "target_seconds": 1800
-        },
-        "04_SQL_PostgreSQL_Mastery": {
-            "target_seconds": 1800
+            "target_seconds": 900
         }
     },
     "20260902": {
-        "02_Redis_Caching": {
-            "target_seconds": 900
+        "04_SQL_PostgreSQL_Mastery": {
+            "target_seconds": 2700
         },
         "03_Kafka_EventDriven": {
-            "target_seconds": 1800
-        },
-        "04_SQL_PostgreSQL_Mastery": {
-            "target_seconds": 1800
+            "target_seconds": 900
         }
     },
     "20260903": {
@@ -333,26 +357,26 @@
         }
     },
     "20260928": {
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 2700
         },
-        "03_Kafka_EventDriven": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 900
         }
     },
     "20260929": {
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 2700
         },
-        "03_Kafka_EventDriven": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 900
         }
     },
     "20260930": {
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 2700
         },
-        "03_Kafka_EventDriven": {
+        "04_SQL_PostgreSQL_Mastery": {
             "target_seconds": 900
         }
     },
@@ -501,26 +525,26 @@
         }
     },
     "20261019": {
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 2700
         },
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 900
         }
     },
     "20261020": {
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 2700
         },
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 900
         }
     },
     "20261021": {
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 2700
         },
-        "04_SQL_PostgreSQL_Mastery": {
+        "05_Storage_DDIA": {
             "target_seconds": 900
         }
     },
@@ -669,26 +693,26 @@
         }
     },
     "20261109": {
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 2700
         },
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 900
         }
     },
     "20261110": {
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 2700
         },
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 900
         }
     },
     "20261111": {
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 2700
         },
-        "05_Storage_DDIA": {
+        "06_SystemDesign_Architecture": {
             "target_seconds": 900
         }
     },
@@ -781,26 +805,26 @@
         }
     },
     "20261123": {
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 2700
         },
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 900
         }
     },
     "20261124": {
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 2700
         },
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 900
         }
     },
     "20261125": {
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 2700
         },
-        "06_SystemDesign_Architecture": {
+        "07_Networking_Security": {
             "target_seconds": 900
         }
     },
@@ -837,26 +861,26 @@
         }
     },
     "20261130": {
-        "08_ComputerScience_SWE_optional": {
+        "09_WebDev_GeneralCS_optional": {
             "target_seconds": 2700
         },
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 900
         }
     },
     "20261201": {
-        "08_ComputerScience_SWE_optional": {
+        "09_WebDev_GeneralCS_optional": {
             "target_seconds": 2700
         },
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 900
         }
     },
     "20261202": {
-        "08_ComputerScience_SWE_optional": {
+        "09_WebDev_GeneralCS_optional": {
             "target_seconds": 2700
         },
-        "07_Networking_Security": {
+        "08_ComputerScience_SWE_optional": {
             "target_seconds": 900
         }
     },
@@ -885,30 +909,6 @@
         }
     },
     "20261206": {
-        "09_WebDev_GeneralCS_optional": {
-            "target_seconds": 2700
-        },
-        "08_ComputerScience_SWE_optional": {
-            "target_seconds": 900
-        }
-    },
-    "20261207": {
-        "09_WebDev_GeneralCS_optional": {
-            "target_seconds": 2700
-        },
-        "08_ComputerScience_SWE_optional": {
-            "target_seconds": 900
-        }
-    },
-    "20261208": {
-        "09_WebDev_GeneralCS_optional": {
-            "target_seconds": 2700
-        },
-        "08_ComputerScience_SWE_optional": {
-            "target_seconds": 900
-        }
-    },
-    "20261209": {
         "09_WebDev_GeneralCS_optional": {
             "target_seconds": 2700
         },
