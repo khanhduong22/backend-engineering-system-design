@@ -108,7 +108,7 @@ def main():
                     if k and k not in api_keys:
                         api_keys.append(k)
 
-    key2 = "AIzaSyCmUfCKApT5a2vob1mQpJ1drTqzMOtOrOM"
+    key2 = os.getenv("GEMINI_API_KEY", "")
     if key2 in api_keys:
         api_keys.remove(key2)
         api_keys.insert(0, key2)
