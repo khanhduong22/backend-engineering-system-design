@@ -48,15 +48,15 @@ gantt
 | **Tuần 5** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 5:** **Adaptive Concurrency Limit** (TCP Vegas) + ZSET Limiter | **Golang (Go)** + Dynamic Latency Throttling + Microsecond Precision |
 | **Tuần 6** | **`04_SQL_PostgreSQL_Mastery` (272 câu cuối - FULL 1,172c)**| **PoC 6:** Snowflake Distributed Unique 64-bit ID Generator | **Golang (Go)** + Distributed Epoch/Machine/Sequence Bitwise ID |
 | **Tuần 7** | **`05_Storage_DDIA` (260 câu đầu)** | **PoC 7:** Socket.io + Redis PubSub + **Zero-Copy Streaming** | **NestJS** + Multi-Instance Socket Adapter + Kernel Zero-Copy I/O |
-| **Tuần 8** | **`05_Storage_DDIA` (260 câu tiếp)** | **PoC 8:** Meilisearch + **Bloom Filter & Count-Min Sketch** | **NestJS** + Zero Cache Penetration + Top Trending Filter |
+| **Tuần 8** | **`05_Storage_DDIA` (260 câu tiếp)** | **PoC 8:** **Advanced Financial RAG** (Hybrid Search BM25 + Vector + Rerank) | **NestJS** + Hybrid Dense/Sparse Search + Cohere Re-ranker Engine |
 | **Tuần 9** | **`05_Storage_DDIA` (225 câu cuối - FULL 745c)** | **App 1:** Flash Sale & E-Commerce Inventory Reservation | Live API App 1 + k6 5k QPS load chart + Singleflight Mutex |
 | **Tuần 10** | **`06_SystemDesign_Architecture` (260 câu đầu)** | **App 2:** Real-Time Chat & **CRDTs Multi-User Collab Engine** | Live API App 2 + Conflict-Free State Merging (Figma/Notion Style) |
-| **Tuần 11** | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch + Inverted Index Engine |
+| **Tuần 11** | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** **Enterprise Compliance RAG & Legal Search Service** | Live API App 3 + Parent-Document Retriever + Metadata Filtering |
 | **Tuần 12** | **`06_SystemDesign_Architecture` (131 câu cuối - FULL 651c)** | **App 4:** Payment Gateway & **TCC Distributed Engine** (Try-Confirm-Cancel) | Live API App 4 + TCC 3-Phase Atomic Payment + Idempotency |
 | **Tuần 13** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 5:** Short-Link Analytics API (**HyperLogLog UV**) | Live API App 5 + Linkpul 12KB RAM UV Analytics |
 | **Tuần 14** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 6:** Real-Time Fintech Ticker & **Limit Order Book (LOB)** | Live API App 6 + NASDAQ/Binance Price-Time Priority LOB Engine |
 | **Tuần 15** | **`08_ComputerScience_SWE_optional` (Thẻ High-ROI)** | **App 7:** Proximity & Driver Dispatch API (**GeoHashes**) | Live API App 7 + Uber Spatial Indexing 1D B-Tree Search |
-| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI)** | **App 8:** **Double-Entry Ledger Engine** + **Merkle Tree & Outbox** | Live API App 8 + Immutable Financial Ledger + Debezium CDC |
+| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI)** | **App 8:** **Tokenized Asset (RWA) Sandbox** & **Double-Entry Ledger** | Live API App 8 + Smart Contract Custody + Debezium CDC |
 
 ---
 
