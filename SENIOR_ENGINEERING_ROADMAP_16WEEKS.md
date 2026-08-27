@@ -42,7 +42,7 @@ gantt
 | Tuần | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Tech Stack & Output VPS Contabo |
 |---|---|---|---|
 | **Tuần 1** | **`01_DesignPatterns` (61 câu)** + **`02_Redis` (112 câu)** | **PoC 1:** Redis Mutex & Atomic Lua Script (`DECR`) | **NestJS / Fastify (TS)** + k6 5k QPS chart |
-| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key Middleware (`X-Idempotency-Key`) | **NestJS (TS)** + Webhook Anti-Duplicate System |
+| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key Engine & **Bitwise RBAC + CASL ABAC Guard** | **NestJS (TS)** + Webhook Deduplication & O(1) Bitmask Auth |
 | **Tuần 3** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 3:** BullMQ/Kafka Worker + Manual ACK + DLQ | **NestJS (TS)** + Resilient Async Queue & DLQ |
 | **Tuần 4** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 4:** Postgres 1M Rows + EXPLAIN ANALYZE + Indexes | **NestJS (TS)** + DB Query Tuning Benchmark |
 | **Tuần 5** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 5:** Token Bucket / Sliding Window Rate Limiter | **Golang (Go)** + Traffic Throttling Module |
