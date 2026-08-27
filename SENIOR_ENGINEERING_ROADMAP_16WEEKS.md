@@ -39,24 +39,24 @@ gantt
 
 ## 📅 2. BẢNG PHÂN BỔ BỘ ANKI HIGH-ROI (TỐI ƯU BỘ 07, 08 & 09)
 
-| Tuần | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Tech Stack & Output VPS Contabo |
+| Tuần | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Vũ khí Thuật toán & Kiến trúc Tinh hoa |
 |---|---|---|---|
-| **Tuần 1** | **`01_DesignPatterns` (61 câu)** + **`02_Redis` (112 câu)** | **PoC 1:** Redis Mutex & Atomic Lua Script (`DECR`) | **NestJS / Fastify (TS)** + k6 5k QPS chart |
-| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key Engine & **Bitwise RBAC + CASL ABAC Guard** | **NestJS (TS)** + Webhook Deduplication & O(1) Bitmask Auth |
-| **Tuần 3** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 3:** BullMQ/Kafka Worker + Manual ACK + DLQ | **NestJS (TS)** + Resilient Async Queue & DLQ |
-| **Tuần 4** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 4:** Postgres 1M Rows + EXPLAIN ANALYZE + Indexes | **NestJS (TS)** + DB Query Tuning Benchmark |
-| **Tuần 5** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 5:** Token Bucket / Sliding Window Rate Limiter | **Golang (Go)** + Traffic Throttling Module |
-| **Tuần 6** | **`04_SQL_PostgreSQL_Mastery` (272 câu cuối - TRỌN BỘ 1,172 CÂU)** | **PoC 6:** Snowflake Distributed Unique ID Generator | **Golang (Go)** + Distributed 64-bit ID Service |
-| **Tuần 7** | **`05_Storage_DDIA` (260 câu đầu)** | **PoC 7:** Socket.io + Redis PubSub + Room State | **NestJS (TS)** + Real-time WebSocket Messaging Hub |
-| **Tuần 8** | **`05_Storage_DDIA` (260 câu tiếp)** | **PoC 8:** Meilisearch + Redis Bloom + GIN Index | **NestJS (TS)** + High-Speed Search Engine |
-| **Tuần 9** | **`05_Storage_DDIA` (225 câu cuối - TRỌN BỘ 745 CÂU)** | **App 1:** Flash Sale & E-Commerce Core API | Live API App 1 + k6 5k QPS load chart |
-| **Tuần 10** | **`06_SystemDesign_Architecture` (260 câu đầu)** | **App 2:** Real-Time Chat & Notification API | Live API App 2 + WebSockets Server |
-| **Tuần 11** | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch Engine |
-| **Tuần 12** | **`06_SystemDesign_Architecture` (131 câu cuối - TRỌN BỘ 651 CÂU)** | **App 4:** Payment Gateway & Webhook API | Live API App 4 + Anti-Duplicate Webhook |
-| **Tuần 13** | **`07_Networking_Security` (Thẻ Senior/Mid:** TLS 1.3, HTTP/2, HTTP/3, OAuth2) | **App 5:** Short-Link Analytics API (Linkpul) | Live API App 5 + HyperLogLog UV Analytics |
-| **Tuần 14** | **`07_Networking_Security` (Thẻ Senior/Mid:** epoll, Socket Buffers, CORS Security) | **App 6:** Real-Time Fintech Ticker API (Index) | Live API App 6 + TimescaleDB CAGGs |
-| **Tuần 15** | **`08_ComputerScience_SWE_optional` (Thẻ High-ROI:** Concurrency, Memory Models) | **App 7:** Proximity & Driver Dispatch API (Uber) | Live API App 7 + Redis GeoHashes |
-| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI:** API Specs, Web Architecture) | **App 8:** Microservices Order Saga & Outbox API | Live API App 8 + Full Senior/Lead Portfolio |
+| **Tuần 1** | **`01_DesignPatterns` (61 câu)** + **`02_Redis` (112 câu)** | **PoC 1:** Redis Mutex & **365-Day Bitmap Streak** (`SETBIT / BITCOUNT`) | **NestJS/Fastify** + Atomic Lua Mutex + 46-byte Check-in Bitmap |
+| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key & **Bitwise RBAC + CASL ABAC Guard** | **NestJS** + O(1) Bitmask Auth + Centralized Declarative ABAC |
+| **Tuần 3** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 3:** Kafka Streaming & **Circuit Breaker** (Opossum) + DLQ | **NestJS** + Fail-Fast Circuit Breaker + LSM-Tree Append Log |
+| **Tuần 4** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 4:** Postgres 1M Rows + **Materialized Path** (`ltree` / GiST) | **NestJS** + 1-Query Recursive Tree + EXPLAIN ANALYZE Tuning |
+| **Tuần 5** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 5:** Token Bucket & **Sliding Window Log** Rate Limiter | **Golang (Go)** + Microsecond Precision ZSET Rate Limiting |
+| **Tuần 6** | **`04_SQL_PostgreSQL_Mastery` (272 câu cuối - FULL 1,172c)**| **PoC 6:** Snowflake Distributed Unique 64-bit ID Generator | **Golang (Go)** + Distributed Epoch/Machine/Sequence Bitwise ID |
+| **Tuần 7** | **`05_Storage_DDIA` (260 câu đầu)** | **PoC 7:** Socket.io + Redis PubSub + Room State Management | **NestJS** + Multi-Instance Socket Adapter & Message Bus |
+| **Tuần 8** | **`05_Storage_DDIA` (260 câu tiếp)** | **PoC 8:** Meilisearch + **Bloom Filter & Count-Min Sketch** | **NestJS** + Zero Cache Penetration + Top Trending Filter |
+| **Tuần 9** | **`05_Storage_DDIA` (225 câu cuối - FULL 745c)** | **App 1:** Flash Sale & E-Commerce Inventory Reservation | Live API App 1 + k6 5k QPS load chart + Mutex Lock |
+| **Tuần 10** | **`06_SystemDesign_Architecture` (260 câu đầu)** | **App 2:** Real-Time Chat & Notification Service | Live API App 2 + Multi-Room WebSockets Server |
+| **Tuần 11** | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch + Inverted Index Engine |
+| **Tuần 12** | **`06_SystemDesign_Architecture` (131 câu cuối - FULL 651c)** | **App 4:** Payment Gateway & Anti-Duplicate Webhook | Live API App 4 + Circuit Breaker + Idempotency Engine |
+| **Tuần 13** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 5:** Short-Link Analytics API (**HyperLogLog UV**) | Live API App 5 + Linkpul 12KB RAM UV Analytics |
+| **Tuần 14** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 6:** Real-Time Leaderboard & Gamification (**Skip List**) | Live API App 6 + Redis ZSET O(log N) Skip List Engine |
+| **Tuần 15** | **`08_ComputerScience_SWE_optional` (Thẻ High-ROI)** | **App 7:** Proximity & Driver Dispatch API (**GeoHashes**) | Live API App 7 + Uber Spatial Indexing 1D B-Tree Search |
+| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI)** | **App 8:** Order Saga & **Transactional Outbox** Engine | Live API App 8 + Debezium CDC + Zero Dual-Write Inconsistency |
 
 ---
 
