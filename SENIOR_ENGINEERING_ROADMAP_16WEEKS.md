@@ -39,10 +39,10 @@ gantt
 
 ## 📅 2. BẢNG PHÂN BỔ BỘ ANKI HIGH-ROI (TỐI ƯU BỘ 07, 08 & 09)
 
-| Tuần | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Vũ khí Thuật toán & Kiến trúc Tinh hoa |
+| Tuần | Thẻ Anki Học Mới & Ôn Lặp Hàng Ngày | PoC (Phase 1) / Showcase API App (Phase 2) | Vũ khí Thuật toán & Kiến trúc Tinh hoa (High-Concurrency Architecture) |
 |---|---|---|---|
 | **Tuần 1** | **`01_DesignPatterns` (61 câu)** + **`02_Redis` (112 câu)** | **PoC 1:** Redis Mutex + **Singleflight** + **365-Day Bitmap** | **NestJS/Fastify** + Singleflight Thundering Herd Killer + 46B Streak |
-| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key & **Bitwise RBAC + CASL ABAC Guard** | **NestJS** + O(1) Bitmask Auth + Centralized Declarative ABAC |
+| **Tuần 2** | **`03_Kafka` (140 câu)** + **`04_SQL` (120 câu đầu)** | **PoC 2:** Idempotency Key & **Deadlock-Free Transfer Lock** (`MIN/MAX`) | **NestJS** + O(1) Bitmask Auth + Deadlock-Free Banking Core |
 | **Tuần 3** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 3:** Kafka Streaming + **Circuit Breaker** + **LSM-Tree Log** | **NestJS** + Fail-Fast Circuit Breaker + Sequential Append-Only WAL |
 | **Tuần 4** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 4:** Postgres 1M Rows + **Materialized Path** (`ltree` / GiST) | **NestJS** + 1-Query Recursive Tree + EXPLAIN ANALYZE Tuning |
 | **Tuần 5** | **`04_SQL_PostgreSQL_Mastery` (260 câu tiếp)** | **PoC 5:** **Adaptive Concurrency Limit** (TCP Vegas) + ZSET Limiter | **Golang (Go)** + Dynamic Latency Throttling + Microsecond Precision |
@@ -52,11 +52,11 @@ gantt
 | **Tuần 9** | **`05_Storage_DDIA` (225 câu cuối - FULL 745c)** | **App 1:** Flash Sale & E-Commerce Inventory Reservation | Live API App 1 + k6 5k QPS load chart + Singleflight Mutex |
 | **Tuần 10** | **`06_SystemDesign_Architecture` (260 câu đầu)** | **App 2:** Real-Time Chat & **CRDTs Multi-User Collab Engine** | Live API App 2 + Conflict-Free State Merging (Figma/Notion Style) |
 | **Tuần 11** | **`06_SystemDesign_Architecture` (260 câu tiếp)** | **App 3:** High-Speed Search & Catalog API | Live API App 3 + Meilisearch + Inverted Index Engine |
-| **Tuần 12** | **`06_SystemDesign_Architecture` (131 câu cuối - FULL 651c)** | **App 4:** Payment Gateway & Anti-Duplicate Webhook | Live API App 4 + Circuit Breaker + Idempotency Engine |
+| **Tuần 12** | **`06_SystemDesign_Architecture` (131 câu cuối - FULL 651c)** | **App 4:** Payment Gateway & **TCC Distributed Engine** (Try-Confirm-Cancel) | Live API App 4 + TCC 3-Phase Atomic Payment + Idempotency |
 | **Tuần 13** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 5:** Short-Link Analytics API (**HyperLogLog UV**) | Live API App 5 + Linkpul 12KB RAM UV Analytics |
-| **Tuần 14** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 6:** Real-Time Leaderboard & Gamification (**Skip List**) | Live API App 6 + Redis ZSET O(log N) Skip List Engine |
+| **Tuần 14** | **`07_Networking_Security` (Thẻ Senior/Mid)** | **App 6:** Real-Time Fintech Ticker & **Limit Order Book (LOB)** | Live API App 6 + NASDAQ/Binance Price-Time Priority LOB Engine |
 | **Tuần 15** | **`08_ComputerScience_SWE_optional` (Thẻ High-ROI)** | **App 7:** Proximity & Driver Dispatch API (**GeoHashes**) | Live API App 7 + Uber Spatial Indexing 1D B-Tree Search |
-| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI)** | **App 8:** Order Saga & **Merkle Tree Anti-Entropy Engine** | Live API App 8 + Merkle Root Reconciliation + Outbox Debezium |
+| **Tuần 16** | **`09_WebDev_GeneralCS_optional` (Thẻ High-ROI)** | **App 8:** **Double-Entry Ledger Engine** + **Merkle Tree & Outbox** | Live API App 8 + Immutable Financial Ledger + Debezium CDC |
 
 ---
 
